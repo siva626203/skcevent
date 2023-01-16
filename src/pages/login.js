@@ -69,7 +69,7 @@ const cformik=useFormik({initialValues:{
   }),
   onSubmit:(data)=>{
     console.log(data)
-    axios.post("https://skc-api-db.herokuapp.com/api/auth/college/login",data)
+    axios.post("./api/auth/college/login",data)
     .then((req,res)=>{
       
       console.log(req.data)
@@ -100,7 +100,7 @@ const cformik=useFormik({initialValues:{
     }),
     onSubmit:(data)=>{
       console.log(data)
-      axios.post("https://skc-api-db.herokuapp.com/api/auth/faculty/login",data)
+      axios.post("./api/auth/faculty/login",data)
       .then((req,res)=>{
         
         console.log(req)
