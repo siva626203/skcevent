@@ -5,7 +5,7 @@ import { Form } from 'react-bootstrap';
 import * as yup from 'yup'
 import { useFormik } from 'formik';
 import axios from 'axios';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import { useSelector,useDispatch } from 'react-redux';
 import { login } from '../features/user';
@@ -109,8 +109,9 @@ const cformik=useFormik({initialValues:{
           toast.error(req.data)
         }else{
           dispatch(login({username:fformik.values.username,status:req.data}))
-          toast.success("Welcome to SKC")
           navigate.push("/dashboard")
+          toast.success("Welcome to SKC")
+          
     
         }
         
@@ -122,6 +123,7 @@ const cformik=useFormik({initialValues:{
     
     })
   return (<>
+  <ToastContainer/>
   <Header/>
     < div className='login'>
     {/* < div className='cl-login'>
@@ -168,7 +170,7 @@ const cformik=useFormik({initialValues:{
                     <Form.Control type='text' onChange={formik.handleChange} required name="username" value={formik.values.username}/>
                     {<p className='text-danger'>{formik.errors.username}</p>}
                     <Form.Label>Enter Your password</Form.Label>
-                    <Form.Control type="text" required name="password" value={formik.values.password} onChange={formik.handleChange}/>
+                    <Form.Control type="password" required name="password" value={formik.values.password} onChange={formik.handleChange}/>
                     {<p className='text-danger'>{formik.errors.password}</p>}
                     <Button type='submit' variant='success'>SUBMIT</Button>
                   
@@ -198,7 +200,7 @@ const cformik=useFormik({initialValues:{
                     <Form.Control type='text' onChange={fformik.handleChange} required name="username" value={fformik.values.username}/>
                     {<p className='text-danger'>{fformik.errors.username}</p>}
                     <Form.Label>Enter Your password</Form.Label>
-                    <Form.Control type="text" required name="password" value={fformik.values.password} onChange={fformik.handleChange}/>
+                    <Form.Control type="password" required name="password" value={fformik.values.password} onChange={fformik.handleChange}/>
                     {<p className='text-danger'>{fformik.errors.password}</p>}
                     <Button type='submit' variant='success'>SUBMIT</Button>
                 </Form.Group></Form>

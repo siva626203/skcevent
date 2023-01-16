@@ -7,7 +7,7 @@ import axios from "axios";
 import ListTable from "./component/table";
 import { useFormik, yupToFormErrors } from "formik";
 import * as yup  from 'yup';
-import {toast} from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify';
 
 import StudentList from "./component/studentList";
 import Student from "./component/student";
@@ -76,6 +76,7 @@ useEffect(()=>{
 },[]);
     return(<>
         <div>
+            <ToastContainer/>
             <Header/>
            <h1> dashboard</h1>
            <h1>Welcome to Our {currentUser.username}</h1>

@@ -11,7 +11,7 @@ import axios from 'axios'
 import { useFormik,Field } from 'formik'
 import * as yup from 'yup'
 import { render } from 'react-dom';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Register=()=> {
@@ -63,6 +63,7 @@ const Register=()=> {
   });
    return (
         <div className='rform'>
+          <ToastContainer/>
             <h1>Register</h1> 
             <Form className='md-3' onSubmit={formik.handleSubmit}>
               <Form.Group>
