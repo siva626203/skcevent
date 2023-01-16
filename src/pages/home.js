@@ -1,12 +1,12 @@
 import { React,Fragment, useEffect, useState } from 'react'
-import Footer from '../component/footer';
+// import Footer from './component/footer';
 import { useSelector, useDispatch } from 'react-redux';
-import { logout,login } from '../features/user';
-import "../css/scrollani.css"
-import "../animation/ani.js"
+// import { logout,login } from '../features/user';
+// import "../css/scrollani.css"
+// import "../animation/ani.js"
 import axios from 'axios'
-import Img1 from '../images/img1.png'
-function Home(){
+// import Img1 from '../images/img1.png'
+const Home=()=>{
   const dispatch=useDispatch()
   const [name,setUsername]=useState()
   const [email,setEmail]=useState()
@@ -26,7 +26,7 @@ function Home(){
 
     <p>Demonstrating technical and operational excellence through a commitment to professionalism and continuous improvement</p>
 
-    <img src={Img1} className="inline-photo show-on-scroll" alt="My Awesome Image"/>
+    {/* <img src={Img1} className="inline-photo show-on-scroll" alt="My Awesome Image"/> */}
     
     <h2>Make an Italian pizza</h2>
 

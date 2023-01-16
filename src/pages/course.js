@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Course(props) {
+const Course=(props)=> {
     return (
         <div>
             <h1>Courses</h1>

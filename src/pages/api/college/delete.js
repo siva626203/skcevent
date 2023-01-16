@@ -1,5 +1,5 @@
 import Register from "../../../../Models/registermodel";
-import dbconnect from "../../../../mongodb/index";
+import dbconnect from "../../../mongodb/index";
 dbconnect();
 export default async (req,res)=>{
     const register=await Register.findOne({username:req.body.username});

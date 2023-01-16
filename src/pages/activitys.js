@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Activitys(props) {
+const Activitys=(props)=> {
     return (
         <div>
             <h1>Active</h1>

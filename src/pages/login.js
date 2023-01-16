@@ -11,7 +11,7 @@ import { useSelector,useDispatch } from 'react-redux';
 import { login } from '../features/user';
 import Header from './component/header';
 import Footer from './component/footer';
-function Login() {
+const Login=()=> {
   const dispatch=useDispatch();
   const navigate=useRouter();
   const [show, setShow] = useState(false);

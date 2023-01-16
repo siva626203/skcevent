@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Alloncement(props) {
+const Alloncement=(props)=> {
     return (
         <div>
             <h1>Alloncements</h1>

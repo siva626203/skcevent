@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import {Table,Button} from 'react-bootstrap'
@@ -52,7 +52,7 @@ this.getAll();
             
            this.state.sdata.map((e)=>{
             if(e.staffname===this.props.username){
-            return <Fragment>
+            return <Fragment key={e._id}>
                 <tr key={e._id}>
                     <td>{e._id}</td>
                     <td>{e.sname}</td>

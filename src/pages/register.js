@@ -14,7 +14,7 @@ import { render } from 'react-dom';
 import { toast } from 'react-toastify';
 
 
-function Register() {
+const Register=()=> {
   const navigate=useRouter();
 
   const formik=useFormik({

@@ -11,13 +11,12 @@ import {toast} from 'react-toastify'
 
 import StudentList from "./component/studentList";
 import Student from "./component/student";
-import { current } from "@reduxjs/toolkit";
 import StudentShort from "./component/studentsort";
 import FacultyDash from "./component/facultyform";
 import StudentMarkList from "./component/studentmark";
 import Header from "./component/header";
 import Footer from "./component/footer";
-function Dashboard(){
+const Dashboard=()=>{
     const formik=useFormik({
         initialValues:{
             facultyname:"",
