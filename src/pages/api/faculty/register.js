@@ -1,6 +1,6 @@
 import dbconnect from "../../../mongodb/index";
+import Faculty from '../../../../Models/facultymodel'
 dbconnect();
-import Faculty from "../../../../Models/facultymodel";
 export default async (request,response)=>{
   
     const username=await Faculty.findOne({username:request.body.username})

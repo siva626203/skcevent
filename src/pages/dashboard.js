@@ -36,7 +36,7 @@ const Dashboard=()=>{
             .required("Event Name is required")
         }),
         onSubmit:(data)=>{
-            axios.post("https://skcevent.vercel.app/api/faculty/register",data)
+            axios.post("./api/faculty/register",data)
             .then((req,res)=>{
                 if(req.data==="username already Exist")
                 {
