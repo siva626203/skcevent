@@ -21,7 +21,7 @@ this.getAll();
     }
 
  getAll=()=>{
-      axios.get("../api/auth/college/datails")
+      axios.get("../api/auth/college/details")
             .then((req,res)=>{
                 this.setState({
                     data:req.data
@@ -33,7 +33,7 @@ this.getAll();
             }).catch((e)=>{
                 console.log(e);
             })
-            axios.get("../api/faculty/datails")
+            axios.get("../api/faculty/details")
             .then((req,res)=>{
                 this.setState({
                     fdata:req.data
