@@ -74,7 +74,7 @@ useEffect(()=>{
    
     
 },[]);
-    return(
+    return(<>
         <div>
             <Header/>
            <h1> dashboard</h1>
@@ -117,8 +117,10 @@ useEffect(()=>{
            </Fragment>
            :null}<br/>
           
-        <Footer/>
+        
         </div>
+        <Footer/>
+        </>
     )
 }
 export default Dashboard;
