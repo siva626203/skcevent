@@ -1,0 +1,83 @@
+.rform{
+    background-color: aqua;
+    margin: 50px;
+    border-radius: 20px;
+    text-align: center;
+}
+.login {
+  text-align: left;
+    position: relative;
+    background: white;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    float: right;
+    right: 20px;
+  }
+  
+  .login::before {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    top: -1px;
+    right: -10px;
+    border: 10px solid transparent;
+    border-top: 10px solid #ccc;
+  }
+  
+  .login::after {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    top: 0px;
+    right: -8px;
+    border: 10px solid transparent;
+    border-top: 10px solid white;
+    clear: both;
+  }
+  .cl-login{
+    padding: 30px;
+  }
+  .f-login{
+    padding: 30px;
+  }
+  .a-login{
+    padding: 30px;
+  }
+  .d-list{
+    color: red;
+    text-rendering: initial;
+    text-align: center;
+  }
+.navbar-head{
+  background: rgb(2,0,36);
+  border-radius: 20px;
+  width: 350px;
+  height: 30px;
+  padding-left: 20px;
+  background: rgb(40,31,188);
+  background: linear-gradient(90deg, rgba(40,31,188,1) 0%, rgba(9,85,121,0.8130602582830007) 13%, rgba(145,36,181,0.8886905103838411) 51%, rgba(0,212,255,1) 100%);
+}
+@media only screen and (max-width: 600px) {
+  .navbar-head{
+    background: rgb(2,0,36);
+    border-radius: 10px;
+    width: 220px;
+    height: 25px;
+    font-size: 13px;
+    padding:1px;
+    text-align: center;
+    background: rgb(40,31,188);
+    background: linear-gradient(90deg, rgba(40,31,188,1) 0%, rgba(9,85,121,0.8130602582830007) 13%, rgba(145,36,181,0.8886905103838411) 51%, rgba(0,212,255,1) 100%);
+  }
+  .navbar-text{
+    background: rgb(2,0,36);
+    border-radius: 10px;
+    
+    font-size: 8px;
+    padding:1px;
+    background: rgb(31,169,188);
+    background: linear-gradient(90deg, rgba(31,169,188,0.9895308465182948) 0%, rgba(57,9,121,0.7738445720084909) 13%, rgba(181,36,176,0.8018557764902836) 51%, rgba(0,254,255,0.950315160243785) 100%);
+  }
+}
