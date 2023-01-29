@@ -25,5 +25,10 @@ const StudentMarkScheema=new mongoose.Schema({
         
     }
 })
-const StudentMark=mongoose.model("StudentMark",StudentMarkScheema);
+let StudentMark;
+try {
+    StudentMark = mongoose.model("StudentMark");
+} catch {
+    StudentMark= mongoose.model("StudentMark", StudentMarkScheema);
+}
 module.exports=StudentMark;

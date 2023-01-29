@@ -13,5 +13,11 @@ const adminSchema = new mongoose.Schema({
     type:String
   }
 });
-const Admin=mongoose.model("admins", adminSchema);
+let Admin;
+try {
+  Admin = mongoose.model("admins");
+} catch {
+  Admin = mongoose.model("admins", adminSchema);
+}
+
 module.exports=Admin;

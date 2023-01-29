@@ -1,11 +1,7 @@
 const mongoose = require("mongoose");
 
 const registerSchema=new mongoose.Schema({
-  username:{
-    type:String,
-    required:true
-  },
-  password:{
+  lotno:{
     type:String,
     required:true
   },
@@ -17,21 +13,31 @@ const registerSchema=new mongoose.Schema({
     type: String,
     required:true
   },
-  sname:{
-    type: String,
+  staffname:{
+    type:String,
     required:true
   },
-  status:{
-    type:String
+  department:{
+    type:String,
+    required:true
   },
   scontact:{
     type:Number,
     required:true,
-    
+  },
+  studentDetails:{
+    type:[
+      {name:String,event:String}
+    ],
+    required:true
   }
 })
 
 
-const Register=mongoose.model("Register",registerSchema)
-
+let Register;
+try {
+  Register = mongoose.model("Register");
+} catch {
+  Register= mongoose.model("Register", registerSchema);
+}
 module.exports=Register;

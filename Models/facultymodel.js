@@ -21,5 +21,10 @@ const facultysheema= new mongoose.Schema({
         required:true
     }
 })
-const Faculty=mongoose.model("faculty",facultysheema);
+let Faculty;
+try {
+    Faculty = mongoose.model("faculty");
+} catch {
+    Faculty = mongoose.model("faculty", facultysheema);
+}
 module.exports=Faculty;

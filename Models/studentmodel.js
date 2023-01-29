@@ -1,5 +1,9 @@
 const mongoose=require('mongoose')
 const studentscheema=mongoose.Schema({
+    lotno:{
+      type:String,
+      required:true
+    },
     sname:{
         type:String,
         required:true
@@ -8,10 +12,16 @@ const studentscheema=mongoose.Schema({
         type:String,
         required:true
     },
-    staffname:{
+    cname:{
         type:String,
         required:true
     }
 })
-const Student=mongoose.model("students",studentscheema)
+
+let Student;
+try {
+  Student = mongoose.model("students");
+} catch {
+  Student= mongoose.model("students", studentscheema);
+}
 module.exports=Student;

@@ -14,5 +14,10 @@ const UserSchema = new mongoose.Schema({
     required: true,
   }
 });
-const User = mongoose.model("User", UserSchema);
+let User ;
+try {
+  User = mongoose.model("User");
+} catch {
+  User= mongoose.model("User", UserSchema);
+}
 module.exports = User;

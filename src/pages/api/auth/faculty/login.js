@@ -11,7 +11,7 @@ export default async (request, response) => {
       return console.log("user not");
       
       }else{
-        response.send(faculty.status);
+        response.send(faculty);
         
       }
       
