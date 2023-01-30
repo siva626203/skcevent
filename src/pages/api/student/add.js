@@ -5,9 +5,9 @@ dbconnect()
 export default async (req,res)=>{
     
     try {
-        const delet=await Register.update({lotno:req.body.lot},{$pull:{studentDetails:req.body}})
-        console.log(delet)
-        res.send({message:"deleted",delet})
+        const add=await Register.updateOne({lotno:req.body.lot},{$push:{studentDetails:req.body}})
+        console.log(add)
+        res.send({message:"Student Added",add})
     } catch (error) {
         console.log(error);
         res.status(500).send("something Wrong") 

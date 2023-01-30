@@ -27,7 +27,7 @@ const registerSchema=new mongoose.Schema({
   },
   studentDetails:{
     type:[
-      {name:String,event:String}
+      {lot:String,name:String,event:String}
     ],
     required:true
   }

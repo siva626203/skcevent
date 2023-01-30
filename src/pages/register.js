@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React, { use, useEffect, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
@@ -68,7 +69,7 @@ const [display,setDisplay]=useState(false)
           
           console.log(res.data.data)
         }else if(res.data==="LotNo Already Taken"){
-          toast.warning(res.data,{
+          toast.warning("LotNo Already Taken",{
             position: toast.POSITION.TOP_RIGHT
           })
         }else{
@@ -84,7 +85,7 @@ const [display,setDisplay]=useState(false)
     }
   });
   const addstd=async()=>{
-    details.push({name:name,event:event})
+    details.push({lotno:formik.values.lotno,name:name,event:event})
     handleClose();
   }
   const deletestd=(e)=>{
@@ -155,7 +156,7 @@ console.log(details)
            </tbody>
          </Table>
          <Button variant="primary" onClick={handleShow}>
-           Launch demo modal
+           ADD studentDetails
          </Button>
 
          <Modal show={show} onHide={handleClose}>

@@ -16,7 +16,7 @@ class StudentList extends React.Component
     componentDidMount(){
 
 this.getAll();
-
+console.log("componen")
     }
 
  getAll=()=>{
@@ -38,10 +38,9 @@ this.getAll();
             <Table responsive striped bordered hover size="sm">
             <thead>
             <tr>
-              <th>S.No</th>
-               <th>Student Name</th>
+               <th>Lot No</th>
                <th>Student Event</th>
-               <th>Staff Name</th>
+               <th>Event</th>
                <th>Delete</th>
             </tr>
           </thead>
@@ -50,15 +49,14 @@ this.getAll();
             
             this.state.sdata.map(e=>
                 <tr key={e._id}>
-                    <td>{e._id}</td>
-                    <td>{e.sname}</td>
+                    <td>{e.lot}</td>
+                    <td>{e.name}</td>
                     <td>{e.event}</td>
-                    <td>{e.staffname}</td>
                     <td><Button onClick={this.Delete=()=>{
                         console.log(e)
-                        axios.delete("../api/student/delete",e)
+                        axios.post("../api/student/delete",e)
                         .then((req,res)=>{
-                            if(req.data==="deleted"){
+                            if(req.data.message==="deleted"){
                             toast.success("Deleted successfully");
                             }
                             this.getAll();

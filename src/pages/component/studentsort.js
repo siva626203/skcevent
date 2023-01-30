@@ -19,6 +19,7 @@ this.getAll();
 
     }
 
+
  getAll=()=>{
     
       axios.get("../api/student/details")
@@ -40,7 +41,6 @@ this.getAll();
             <Table responsive striped bordered hover size="sm">
             <thead>
             <tr>
-              <th>S.No</th>
                <th>Student Name</th>
                <th>Student Event</th>
                <th>Staff Name</th>
@@ -54,7 +54,6 @@ this.getAll();
             if(e.staffname===this.props.username){
             return <Fragment key={e._id}>
                 <tr key={e._id}>
-                    <td>{e._id}</td>
                     <td>{e.sname}</td>
                     <td>{e.event}</td>
                     <td>{e.staffname}</td>

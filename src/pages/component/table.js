@@ -52,7 +52,7 @@ this.getAll();
             <Table responsive striped bordered hover size="sm">
             <thead>
             <tr>
-              <th>S.No</th>
+                <tr>Lot No</tr>
                 <th>College Name</th>
                 <th>College Address</th>
                 <th>Staff Name</th>
@@ -65,14 +65,14 @@ this.getAll();
             
             this.state.data.map(e=>
                 <tr key={e._id}>
-                    <td>{e._id}</td>
+                    <td>{e.lotno}</td>
                     <td>{e.cname}</td>
                     <td>{e.caddress}</td>
-                    <td>{e.sname}</td>
+                    <td>{e.staffname}</td>
                     <td>{e.scontact}</td>   
                     <td><Button onClick={this.Delete=()=>{
                         console.log(e)
-                          axios.delete("../api/college/delete",{data:{username:`${e.username}`}})
+                          axios.delete("../api/college/delete",{data:{_id:`${e._id}`}})
                           .then((req,res)=>{
                               toast.success("Deleted successfully");
                               this.getAll();
@@ -91,7 +91,6 @@ this.getAll();
         <Table responsive striped bordered hover size="sm">
             <thead>
             <tr>
-              <th>S.No</th>
                 <th>Faculty Name</th>
                 <th>Faculty userName</th>
                 <th>Faculty password</th>
@@ -106,7 +105,7 @@ this.getAll();
             
             this.state.fdata.map(e=>
                 <tr key={e._id}>
-                    <td>{e._id}</td>
+                    
                     <td>{e.facultyname}</td>
                     <td>{e.username}</td>
                     <td>{e.password}</td>

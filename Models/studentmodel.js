@@ -11,10 +11,6 @@ const studentscheema=mongoose.Schema({
     event:{
         type:String,
         required:true
-    },
-    cname:{
-        type:String,
-        required:true
     }
 })
 

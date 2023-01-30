@@ -102,11 +102,15 @@ useEffect(()=>{
                 {<p className='text-danger'>{formik.errors.password}</p>}
                 <Form.Label>Select Event Judge</Form.Label>
                 <Form.Select value={formik.values.eventname} type="text" onChange={formik.handleChange} name="eventname">
-                <option>{formik.values.eventname}</option>
-                 <option>Web design</option>
-                 <option>Debuging</option>
-                 <option>Dance</option>
-                 <option>Paper presentation</option>
+                <option selected>default</option>
+                   <option value="POWERPOINT-PRESENTATION">POWERPOINT-PRESENTATION</option>
+                   <option value="TECHNICAL-QUIZ">TECHNICAL-QUIZ</option>
+                   <option value="DEBUGGING">DEBUGGING</option>
+                   <option value="TECHNICAL-MIME">TECHNICAL-MIME</option>
+                   <option value="E-ADVERTISEMENT">E-ADVERTISEMENT</option>
+                   <option value="TECHNICAL-DUBSMASH">TECHNICAL-DUBSMASH</option>
+                   <option value="SHORT-FILM">SHORT-FILM</option>
+                   <option value="E-POSTER-DESIGN">E-POSTER-DESIGN</option>
                 </Form.Select>
                 {<p className='text-danger'>{formik.errors.eventname}</p>}
                 <Form.Label>Position</Form.Label>
