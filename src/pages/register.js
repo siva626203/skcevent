@@ -33,7 +33,7 @@ const [display,setDisplay]=useState(false)
 const [coname,setconame]=useState();
 const [dname,setDname]=useState();
 const getverify=()=>{
-  axios.post("./api/college/verify",{lotno:formik.values.lotno})
+  axios.post("https://skcevent.vercel.app/api/college/verify",{lotno:formik.values.lotno})
   .then((res)=>{
     console.log(res.data)
     if(res.data.message==="Check Lot Number"){
@@ -78,7 +78,7 @@ const getverify=()=>{
         }),
     onSubmit:(data)=>{
       console.log(data)
-      axios.post("./api/college/register",data)
+      axios.post("https://skcevent.vercel.app/api/college/register",data)
       .then(res=>{
         console.log(res.data)
         if(res.data.message==="Registration completed"){
