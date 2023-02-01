@@ -5,19 +5,7 @@ const registerSchema=new mongoose.Schema({
     type:String,
     required:true
   },
-  cname:{
-  type: String,
-  required: true,
-  },
-  caddress:{
-    type: String,
-    required:true
-  },
   staffname:{
-    type:String,
-    required:true
-  },
-  department:{
     type:String,
     required:true
   },
@@ -25,9 +13,50 @@ const registerSchema=new mongoose.Schema({
     type:Number,
     required:true,
   },
-  studentDetails:{
+  ppt:{
     type:[
-      {lot:String,name:String,event:String}
+      {lot:String,name:String,email:String,ph:Number}
+    ],
+    required:true
+  },
+  t_quiz:{
+    type:[
+      {lot:String,name:String,email:String,ph:Number}    ],
+    required:true
+  },
+  debug:{
+    type:[
+      {lot:String,name:String,email:String,ph:Number}
+    ],
+    required:true
+  },
+  t_mime:{
+    type:[
+      {lot:String,name:String,email:String,ph:Number}
+    ],
+    required:true
+  },
+  e_ads:{
+    type:[
+      {lot:String,name:String,email:String,ph:Number}
+    ],
+    required:true
+  },
+  meme:{
+    type:[
+      {lot:String,name:String,email:String,ph:Number}
+    ],
+    required:true
+  },
+  short:{
+    type:[
+      {lot:String,name:String,email:String,ph:Number}
+    ],
+    required:true
+  },
+  e_poster:{
+    type:[
+      {lot:String,name:String,email:String,ph:Number}
     ],
     required:true
   }

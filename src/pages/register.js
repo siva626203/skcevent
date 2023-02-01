@@ -56,14 +56,9 @@ const getverify=()=>{
 }
   const formik=useFormik({
     initialValues:{
-      cname:"",
-      caddress:"",
       staffname:"",
-      department:"",
       scontact:yup.number,
       lotno:"",
-      studentDetails:details
-  
     },validationSchema:yup.object({
       lotno:yup.string()
       .required("Lot no is Required"),
@@ -77,8 +72,45 @@ const getverify=()=>{
       .required('A phone number is required'),
         }),
     onSubmit:(data)=>{
-      console.log(data)
-      axios.post("./api/college/register",data)
+      const datas={
+        staffname:formik.values.staffname,
+        scontact:formik.values.scontact,
+        lotno:formik.values.lotno,
+        ppt:[
+            ppt1,
+            ppt2
+        ],
+        t_quiz:[
+          t_quiz1,
+          t_quiz2
+        ],
+        debug:[
+          debug
+        ],
+        t_mime:[
+          t_mime1,
+          t_mime2,
+          t_mime3,
+          t_mime4,
+          t_mime5
+        ],
+        e_ads:[
+          e_ads1,
+          e_ads2,
+          e_ads3
+        ],
+        meme:[
+          meme1
+        ],
+        short:[
+          short1,short2,short3,short4
+        ],
+        e_poster:[
+          e_poster
+        ]
+  }
+      console.log(datas)
+      axios.post("./api/college/register",datas)
       .then(res=>{
         console.log(res.data)
         if(res.data.message==="Registration completed"){
@@ -87,7 +119,12 @@ const getverify=()=>{
           });
           
           console.log(res.data.data)
-        }else{
+        }else if(res.data.message==="LotNo Already Taken"){
+          toast.error("Already Registred", {
+            position: toast.POSITION.TOP_RIGHT
+          });
+        }
+        else{
         toast.error("Somethig Wrong", {
           position: toast.POSITION.TOP_RIGHT
         });
@@ -99,6 +136,26 @@ const getverify=()=>{
       
     }
   });
+  const [ppt1,setPpt1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [ppt2,setPpt2]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [t_quiz1,setT_quiz1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [t_quiz2,setT_quiz2]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [debug,setDebug]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [t_mime1,setT_mime1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [t_mime2,setT_mime2]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [t_mime3,setT_mime3]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [t_mime4,setT_mime4]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [t_mime5,setT_mime5]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [e_ads1,setE_ads1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [e_ads2,setE_ads2]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [e_ads3,setE_ads3]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [meme1,setMeme1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [e_poster,setE_Poster]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [short1,setShort1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [short2,setShort2]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [short3,setShort3]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+const [short4,setShort4]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+
   const addstd=async()=>{
     details.push({lotno:formik.values.lotno,name:name,event:event})
     handleClose();
@@ -115,7 +172,7 @@ toast.success("Student Removed", {
 });
 console.log(details)
   }
-  
+
    return (<><Header /><div className='rform'>
 
      <ToastContainer />
@@ -172,57 +229,57 @@ console.log(details)
                
                   <tr>
                   <td>POWERPOINT-PRESENTATION</td>
-                  <td><Form.Control required/><Form.Control required/></td>
-                   <td><Form.Control required/><Form.Control required/></td>
-                   <td><Form.Control required/><Form.Control required/></td>
+                  <td><Form.Control required onChange={e=>setPpt1(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setPpt2(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setPpt1(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setPpt2(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setPpt1(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setPpt2(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>TECHNICAL-QUIZ</td>
-                   <td><Form.Control required/><Form.Control required/></td>
-                   <td><Form.Control required/><Form.Control required/></td>
-                   <td><Form.Control required/><Form.Control required/></td>
+                   <td><Form.Control required onChange={e=>setT_quiz1(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setT_quiz2(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setT_quiz1(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setT_quiz2(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setT_quiz1(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setT_quiz2(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>DEBUGGING</td>
-                   <td><Form.Control required/></td>
-                   <td><Form.Control required/></td>
-                   <td><Form.Control required/></td>
+                   <td><Form.Control required onChange={e=>setDebug(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control required  onChange={e=>setDebug(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control required  onChange={e=>setDebug(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>TECHNICAL-MIME</td>
-                   <td><Form.Control required/><Form.Control required/><Form.Control required/><Form.Control required/><Form.Control required/></td>
-                   <td><Form.Control required/><Form.Control required/><Form.Control required/><Form.Control required/><Form.Control required/></td>
-                   <td><Form.Control required/><Form.Control required/><Form.Control required/><Form.Control required/><Form.Control required/></td>
+                   <td><Form.Control required onChange={e=>setT_mime1(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setT_mime2(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setT_mime3(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setT_mime4(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setT_mime5(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setT_mime1(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setT_mime2(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setT_mime3(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setT_mime4(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setT_mime5(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setT_mime1(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setT_mime2(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setT_mime3(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setT_mime4(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setT_mime5(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>MEME CREATION</td>
-                   <td><Form.Control required/></td>
-                   <td><Form.Control required/></td>
-                   <td><Form.Control required/></td>
+                   <td><Form.Control required onChange={e=>setMeme1(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setMeme1(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setMeme1(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>E-ADVERTISEMENT</td>
-                   <td><Form.Control required/><Form.Control required/><Form.Control required/></td>
-                   <td><Form.Control required/><Form.Control required/><Form.Control required/></td>
-                   <td><Form.Control required/><Form.Control required/><Form.Control required/></td>
+                   <td><Form.Control required onChange={e=>setE_ads1(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setE_ads2(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setE_ads3(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setE_ads1(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setE_ads2(pre=>({...pre,email:e.target.value}))}/><Form.Control requiredonChange={e=>setE_ads3(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setE_ads1(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setE_ads2(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setE_ads3(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
-                 <tr>
+                 {/* <tr>
                   <td>TECHNICAL-DUBSMASH</td>
                    <td><Form.Control required/></td>
                    <td><Form.Control required/></td>
                    <td><Form.Control required/></td>
-                 </tr>
+                 </tr> */}
                  <tr>
                   <td>SHORT-FILM</td>
-                   <td><Form.Control required/><Form.Control required/><Form.Control required/><Form.Control required/></td>
-                   <td><Form.Control required/><Form.Control required/><Form.Control required/><Form.Control required/></td>
-                   <td><Form.Control required/><Form.Control required/><Form.Control required/><Form.Control required/></td>
+                   <td><Form.Control required onChange={e=>setShort1(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setShort2(pre=>({...pre,name:e.target.value}))}/><Form.Control onChange={e=>setShort3(pre=>({...pre,name:e.target.value}))} required/><Form.Control required onChange={e=>setShort4(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setShort1(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setShort2(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setShort3(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setShort4(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setShort1(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setShort2(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setShort3(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setShort4(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>E-POSTER-DESIGN</td>
-                   <td><Form.Control required/></td>
-                   <td><Form.Control required/></td>
-                   <td><Form.Control required/></td>
+                   <td><Form.Control required onChange={e=>setE_Poster(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setE_Poster(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control required onChange={e=>setE_Poster(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
 
              </tbody>
