@@ -32,6 +32,26 @@ const [details,setDetails]=useState([])
 const [display,setDisplay]=useState(false)
 const [coname,setconame]=useState();
 const [dname,setDname]=useState();
+const [lotnum,setLotno]=useState()
+const [ppt1,setPpt1]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [ppt2,setPpt2]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [t_quiz1,setT_quiz1]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [t_quiz2,setT_quiz2]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [debug,setDebug]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [t_mime1,setT_mime1]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [t_mime2,setT_mime2]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [t_mime3,setT_mime3]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [t_mime4,setT_mime4]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [t_mime5,setT_mime5]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [e_ads1,setE_ads1]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [e_ads2,setE_ads2]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [e_ads3,setE_ads3]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [meme1,setMeme1]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [e_poster,setE_Poster]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [short1,setShort1]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [short2,setShort2]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [short3,setShort3]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [short4,setShort4]=useState({lot:lotnum,name:"",email:"",ph:0})
 const getverify=()=>{
   axios.post("./api/college/verify",{lotno:formik.values.lotno})
   .then((res)=>{
@@ -46,6 +66,7 @@ const getverify=()=>{
     toast.success("Welcome", {
       position: toast.POSITION.TOP_RIGHT
     });
+    setLotno(formik.values.lotno)
     setVerify(true)
     setconame(res.data.data.collegename);
     setDname(res.data.data.department);
@@ -61,7 +82,7 @@ const getverify=()=>{
       lotno:"",
     },validationSchema:yup.object({
       lotno:yup.string()
-      .required("Lot no is Required"),
+      .required("pass code is Required"),
       staffname:yup.string()
       .required("Staff Name is required"),
       scontact:yup.number()
@@ -117,7 +138,7 @@ const getverify=()=>{
           toast.success("Registration completed", {
             position: toast.POSITION.TOP_RIGHT
           });
-          
+          console.log(lotnum)
           console.log(res.data.data)
         }else if(res.data.message==="LotNo Already Taken"){
           toast.error("Already Registred", {
@@ -136,25 +157,7 @@ const getverify=()=>{
       
     }
   });
-  const [ppt1,setPpt1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [ppt2,setPpt2]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [t_quiz1,setT_quiz1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [t_quiz2,setT_quiz2]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [debug,setDebug]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [t_mime1,setT_mime1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [t_mime2,setT_mime2]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [t_mime3,setT_mime3]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [t_mime4,setT_mime4]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [t_mime5,setT_mime5]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [e_ads1,setE_ads1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [e_ads2,setE_ads2]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [e_ads3,setE_ads3]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [meme1,setMeme1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [e_poster,setE_Poster]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [short1,setShort1]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [short2,setShort2]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [short3,setShort3]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
-const [short4,setShort4]=useState({lot:formik.values.lotno,name:"",email:"",ph:0})
+
 
   const addstd=async()=>{
     details.push({lotno:formik.values.lotno,name:name,event:event})
@@ -172,7 +175,9 @@ toast.success("Student Removed", {
 });
 console.log(details)
   }
-
+useEffect(()=>{
+  console.log(lotnum)
+})
    return (<><Header /><div className='rform'>
 
      <ToastContainer />
@@ -186,6 +191,7 @@ console.log(details)
              <Col><Form.Label>Enter Pass Code</Form.Label></Col>
              <Col> <Form.Control type="text" placeholder="Enter Pass Code" onChange={formik.handleChange} name="lotno" value={formik.values.lotno} />
                {formik.errors.lotno ? <p className='text-danger'>{formik.errors.lotno}</p> : null}
+              <Form.Text>Your Pass code is LOT NO</Form.Text>
                </Col>
            </Row><br/>
            <Button onClick={e => getverify()}>Verify</Button>
