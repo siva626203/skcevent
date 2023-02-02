@@ -21,7 +21,7 @@ this.getAll();
     }
 
  getAll=()=>{
-      axios.get("../api/auth/college/details")
+      axios.get("../api/college/details")
             .then((req,res)=>{
                 this.setState({
                     data:req.data
@@ -52,12 +52,10 @@ this.getAll();
             <Table responsive striped bordered hover size="sm">
             <thead>
             <tr>
-                <tr>Lot No</tr>
-                <th>College Name</th>
-                <th>College Address</th>
+                <th>Pass Code</th>
                 <th>Staff Name</th>
                 <th>Staff Contact</th>
-                <td>Delete</td>
+                <th>Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -66,8 +64,6 @@ this.getAll();
             this.state.data.map(e=>
                 <tr key={e._id}>
                     <td>{e.lotno}</td>
-                    <td>{e.cname}</td>
-                    <td>{e.caddress}</td>
                     <td>{e.staffname}</td>
                     <td>{e.scontact}</td>   
                     <td><Button onClick={this.Delete=()=>{

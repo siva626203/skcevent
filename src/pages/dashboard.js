@@ -8,7 +8,7 @@ import ListTable from "./component/table";
 import { useFormik, yupToFormErrors } from "formik";
 import * as yup  from 'yup';
 import { ToastContainer, toast } from 'react-toastify';
-
+import Addcollege from "./component/addcollege";
 import StudentList from "./component/studentList";
 import Student from "./component/student";
 import StudentShort from "./component/studentsort";
@@ -81,10 +81,9 @@ useEffect(()=>{
            <h1> dashboard</h1>
            <h1>Welcome to Our {currentUser.username}</h1>
            <Button onClick={Logout}>Logout</Button><br/>
+           {/* {(currentUser.status==='admin')?<Fragment><Addcollege/></Fragment>:null} */}
            {(currentUser.status==="admin") ? <ListTable/>:null }<br/>
-           {(currentUser.status==="admin")?<Fragment><Student/><StudentList/></Fragment>:null}
-           {(currentUser.status==="college")?<Fragment><Student/><StudentShort username={currentUser.username}/></Fragment>:null}
-           
+           {/* {(currentUser.status==="admin")?<Fragment><Student/><StudentList/></Fragment>:null} */}
            {(currentUser.status==='faculty'?<Fragment><FacultyDash/></Fragment>:null)}
            {(currentUser.status==='admin')?<Fragment><StudentMarkList/></Fragment>:null}
            {(currentUser.status==="admin")? <Fragment>
