@@ -187,7 +187,7 @@ useEffect(()=>{
      <Form className='md-3' onSubmit={formik.handleSubmit}>
       {verification?null:<><Container>
         <Form.Group className="mb-3" controlId="formBasicText">
-          <h6 className='note'>Note: To register INFOSEA 2K23, use you're allotted College Passcode, or wants a new Passcode (for new college's)</h6>
+          <h6 className='note'>Note: To register INFOSEA 2K23, use Your allotted College Passcode, or wants a new Passcode (for new colleges)</h6>
           <h6 className='note-2'>Contact: 95667 74028</h6>
          <Row  className="justify-content-md-center">
              <Col><Form.Label>Enter Pass Code</Form.Label></Col>
