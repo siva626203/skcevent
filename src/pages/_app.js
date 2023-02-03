@@ -6,6 +6,7 @@ import {configureStore} from '@reduxjs/toolkit'
 import userReducer from '../../src/features/user'
 import registerReducer  from '../../src/features/register';
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-awesome-slider/dist/custom-animations/cube-animation.css'
 const store=configureStore({
   reducer: {
     user: userReducer,

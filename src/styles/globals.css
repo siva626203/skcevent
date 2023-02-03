@@ -2,3 +2,32 @@
   padding: 0%;
   margin: 0%;
 }
+.home{
+  /* Created with https://www.css-gradient.com */
+background: #7A81AE;
+background: -webkit-linear-gradient(bottom left, #7A81AE, #D639C7);
+background: -moz-linear-gradient(bottom left, #7A81AE, #D639C7);
+background: linear-gradient(to top right, #7A81AE, #D639C7);
+}
+.note{
+  background: #4DCF89;
+  background: linear-gradient(to right, #4DCF89 20%, #CF927C 64%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: #7A81AE;
+}
+.register-text{
+  background: #121FCF;
+  background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+.address{
+  color: azure;
+  padding-top: 70px;
+}
+.rform{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}

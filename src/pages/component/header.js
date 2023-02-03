@@ -15,10 +15,10 @@ function Header(){
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/'>Home</Link></Nav.Link>
-            <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/activitys'>Activitys</Link></Nav.Link>
+            {/* <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/activitys'>Activitys</Link></Nav.Link>
             <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/galary'>Galary</Link></Nav.Link>
             <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/alloncement'>Alloncements</Link></Nav.Link>
-            <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/course'>Course</Link></Nav.Link>
+            <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/course'>Course</Link></Nav.Link> */}
           </Nav>
           <Nav>
             <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/login'>Login</Link></Nav.Link>

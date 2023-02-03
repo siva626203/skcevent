@@ -182,11 +182,13 @@ useEffect(()=>{
 
      <ToastContainer />
 
-     <h1>Registration</h1>
+     <h1 className='register-text'>Registration</h1>
      <br/>
      <Form className='md-3' onSubmit={formik.handleSubmit}>
       {verification?null:<><Container>
         <Form.Group className="mb-3" controlId="formBasicText">
+          <h6 className='note'>Note: To register INFOSEA 2K23, use you're allotted College Passcode, or wants a new Passcode (for new college's)</h6>
+          <h6 className='note-2'>Contact: 95667 74028</h6>
          <Row  className="justify-content-md-center">
              <Col><Form.Label>Enter Pass Code</Form.Label></Col>
              <Col> <Form.Control type="text" placeholder="Enter Pass Code" onChange={formik.handleChange} name="lotno" value={formik.values.lotno} />
@@ -194,7 +196,7 @@ useEffect(()=>{
               <Form.Text>Your Pass code is LOT NO</Form.Text>
                </Col>
            </Row><br/>
-           <Button onClick={e => getverify()}>Verify</Button>
+           <Button variant="success" onClick={e => getverify()}>Get Form</Button>
            </Form.Group>
        </Container></>
        
