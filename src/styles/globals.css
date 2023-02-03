@@ -45,6 +45,10 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
     
     height: 100%;
   }
+  .checkbox{
+    text-align: left;
+    padding-left: 100px;
+  }
 }
 @media only screen and (max-width: 425px){
 	.image-icon1{
@@ -53,5 +57,9 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
     
     height: 100%;
   
+  }
+  .checkbox{
+    text-align: left;
+    padding-left: 100px;
   }
 }
