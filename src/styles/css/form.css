@@ -82,4 +82,12 @@
     background: rgb(31,169,188);
     background: linear-gradient(90deg, rgba(31,169,188,0.9895308465182948) 0%, rgba(57,9,121,0.7738445720084909) 13%, rgba(181,36,176,0.8018557764902836) 51%, rgba(0,254,255,0.950315160243785) 100%);
   }
+  .rform{
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    
+      margin: 10px;
+      border-radius: 5px;
+      text-align: center;
+  }
 }
