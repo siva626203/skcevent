@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import {useDispatch } from 'react-redux';
 import _ from "lodash";
 import register from '../features/register';
-import { Button, InputGroup } from 'react-bootstrap';
+import { Button, FormCheck, InputGroup } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import axios from 'axios'
 import { useFormik,Field } from 'formik'
@@ -52,6 +52,7 @@ const [short1,setShort1]=useState({lot:lotnum,name:"",email:"",ph:0})
 const [short2,setShort2]=useState({lot:lotnum,name:"",email:"",ph:0})
 const [short3,setShort3]=useState({lot:lotnum,name:"",email:"",ph:0})
 const [short4,setShort4]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [btncheck,setBtn]=useState(false)
 const getverify=()=>{
   axios.post("./api/college/verify",{lotno:formik.values.lotno})
   .then((res)=>{
@@ -224,6 +225,7 @@ useEffect(()=>{
        </Container>
          
          <Form.Group>
+          <p className='text-danger'>* All Fields are mandatory</p>
            <Table striped bordered hover>
              <thead>
                <tr>
@@ -336,7 +338,10 @@ useEffect(()=>{
                </Button>
              </Modal.Footer>
            </Modal> */}
-         </Form.Group><hr /><Button type='submit' className='mb-3'>SUBMIT</Button></>:null}
+           
+         </Form.Group><hr /> <Form.Group className="" controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Given Values are truly correct" onChange={e=>{if(btncheck){setBtn(false)}else{setBtn(true)}}}/>
+      </Form.Group>{btncheck?<Button type='submit' className='mb-3'>SUBMIT</Button>:<Button type='submit' className='mb-3'variant="secondary" disabled>SUBMIT</Button>}</>:null}
        
      </Form>
      <Footer />

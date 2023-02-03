@@ -6,9 +6,6 @@ import { useSelector, useDispatch } from 'react-redux';
 // import "../css/scrollani.css"
 // import "../animation/ani.js"
 import axios from 'axios'
-// import Img1 from '../images/img1.png'
-import AwesomeSlider from 'react-awesome-slider';
-import I1 from "../../image/1.jpg"
 import Carousel from 'react-bootstrap/Carousel';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
