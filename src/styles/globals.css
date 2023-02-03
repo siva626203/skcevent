@@ -31,3 +31,27 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.checkbox{
+  text-align: left;
+  padding-left: 600px;
+}
+.image-icon1{
+  width: 100%;
+}
+@media only screen and (max-width: 600px){
+	.image-icon1{
+    
+    width: 100%;
+    
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 425px){
+	.image-icon1{
+    
+    width: 100%;
+    
+    height: 100%;
+  
+  }
+}

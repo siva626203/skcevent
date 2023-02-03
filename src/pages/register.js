@@ -85,13 +85,13 @@ const getverify=()=>{
       lotno:yup.string()
       .required("pass code is Required"),
       staffname:yup.string()
-      .required("Staff Name is required"),
+      .required("Staff Name is "),
       scontact:yup.number()
       .typeError("That doesn't look like a phone number")
       .positive("A phone number can't start with a minus")
       .integer("A phone number can't include a decimal point")
       .min(999999999)
-      .required('A phone number is required'),
+      .required('A phone number is '),
         }),
     onSubmit:(data)=>{
       const datas={
@@ -239,57 +239,57 @@ useEffect(()=>{
                
                   <tr>
                   <td>POWERPOINT-PRESENTATION</td>
-                  <td><Form.Control required onChange={e=>setPpt1(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setPpt2(pre=>({...pre,name:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setPpt1(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setPpt2(pre=>({...pre,email:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setPpt1(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setPpt2(pre=>({...pre,ph:e.target.value}))}/></td>
+                  <td><Form.Control  onChange={e=>setPpt1(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setPpt2(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setPpt1(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setPpt2(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setPpt1(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setPpt2(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>TECHNICAL-QUIZ</td>
-                   <td><Form.Control required onChange={e=>setT_quiz1(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setT_quiz2(pre=>({...pre,name:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setT_quiz1(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setT_quiz2(pre=>({...pre,email:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setT_quiz1(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setT_quiz2(pre=>({...pre,ph:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setT_quiz1(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setT_quiz2(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setT_quiz1(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setT_quiz2(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setT_quiz1(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setT_quiz2(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>DEBUGGING</td>
-                   <td><Form.Control required onChange={e=>setDebug(pre=>({...pre,name:e.target.value}))}/></td>
-                   <td><Form.Control required  onChange={e=>setDebug(pre=>({...pre,email:e.target.value}))}/></td>
-                   <td><Form.Control required  onChange={e=>setDebug(pre=>({...pre,ph:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setDebug(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control   onChange={e=>setDebug(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control   onChange={e=>setDebug(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>TECHNICAL-MIME</td>
-                   <td><Form.Control required onChange={e=>setT_mime1(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setT_mime2(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setT_mime3(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setT_mime4(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setT_mime5(pre=>({...pre,name:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setT_mime1(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setT_mime2(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setT_mime3(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setT_mime4(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setT_mime5(pre=>({...pre,email:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setT_mime1(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setT_mime2(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setT_mime3(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setT_mime4(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setT_mime5(pre=>({...pre,ph:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setT_mime1(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setT_mime2(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setT_mime3(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setT_mime4(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setT_mime5(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setT_mime1(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setT_mime2(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setT_mime3(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setT_mime4(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setT_mime5(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setT_mime1(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setT_mime2(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setT_mime3(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setT_mime4(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setT_mime5(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>MEME CREATION</td>
-                   <td><Form.Control required onChange={e=>setMeme1(pre=>({...pre,name:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setMeme1(pre=>({...pre,email:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setMeme1(pre=>({...pre,ph:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setMeme1(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setMeme1(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setMeme1(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>E-ADVERTISEMENT</td>
-                   <td><Form.Control required onChange={e=>setE_ads1(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setE_ads2(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setE_ads3(pre=>({...pre,name:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setE_ads1(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setE_ads2(pre=>({...pre,email:e.target.value}))}/><Form.Control requiredonChange={e=>setE_ads3(pre=>({...pre,email:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setE_ads1(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setE_ads2(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setE_ads3(pre=>({...pre,ph:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setE_ads1(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setE_ads2(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setE_ads3(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setE_ads1(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setE_ads2(pre=>({...pre,email:e.target.value}))}/><Form.Control onChange={e=>setE_ads3(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setE_ads1(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setE_ads2(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setE_ads3(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  {/* <tr>
                   <td>TECHNICAL-DUBSMASH</td>
-                   <td><Form.Control required/></td>
-                   <td><Form.Control required/></td>
-                   <td><Form.Control required/></td>
+                   <td><Form.Control /></td>
+                   <td><Form.Control /></td>
+                   <td><Form.Control /></td>
                  </tr> */}
                  <tr>
                   <td>SHORT-FILM</td>
-                   <td><Form.Control required onChange={e=>setShort1(pre=>({...pre,name:e.target.value}))}/><Form.Control required onChange={e=>setShort2(pre=>({...pre,name:e.target.value}))}/><Form.Control onChange={e=>setShort3(pre=>({...pre,name:e.target.value}))} required/><Form.Control required onChange={e=>setShort4(pre=>({...pre,name:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setShort1(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setShort2(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setShort3(pre=>({...pre,email:e.target.value}))}/><Form.Control required onChange={e=>setShort4(pre=>({...pre,email:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setShort1(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setShort2(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setShort3(pre=>({...pre,ph:e.target.value}))}/><Form.Control required onChange={e=>setShort4(pre=>({...pre,ph:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setShort1(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setShort2(pre=>({...pre,name:e.target.value}))}/><Form.Control onChange={e=>setShort3(pre=>({...pre,name:e.target.value}))} /><Form.Control  onChange={e=>setShort4(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setShort1(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setShort2(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setShort3(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setShort4(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setShort1(pre=>({...pre,ph:e.target.value}))}/><Form.Control onChange={e=>setShort2(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setShort3(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setShort4(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
                  <tr>
                   <td>E-POSTER-DESIGN</td>
-                   <td><Form.Control required onChange={e=>setE_Poster(pre=>({...pre,name:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setE_Poster(pre=>({...pre,email:e.target.value}))}/></td>
-                   <td><Form.Control required onChange={e=>setE_Poster(pre=>({...pre,ph:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setE_Poster(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setE_Poster(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setE_Poster(pre=>({...pre,ph:e.target.value}))}/></td>
                  </tr>
 
              </tbody>
@@ -337,12 +337,12 @@ useEffect(()=>{
                  Done
                </Button>
              </Modal.Footer>
-           </Modal> */}
-           
-         </Form.Group><hr /> <Form.Group className="" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Given Values are truly correct" onChange={e=>{if(btncheck){setBtn(false)}else{setBtn(true)}}}/>
-      </Form.Group>{btncheck?<Button type='submit' className='mb-3'>SUBMIT</Button>:<Button type='submit' className='mb-3'variant="secondary" disabled>SUBMIT</Button>}</>:null}
-       
+           </Modal> */}<div className='checkbox'>
+           <Form.Check type="checkbox" label="Given Values are truly correct" onChange={e=>{if(btncheck){setBtn(false)}else{setBtn(true)}}}/>
+           </div>
+         </Form.Group>
+        
+      {btncheck?<Button type='submit' className='mb-3'>SUBMIT</Button>:<Button type='submit' className='mb-3'variant="secondary" disabled>SUBMIT</Button>}</>:null}
      </Form>
      <Footer />
    </div></>

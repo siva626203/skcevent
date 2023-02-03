@@ -11,54 +11,46 @@ const registerSchema=new mongoose.Schema({
   },
   scontact:{
     type:Number,
-    required:true,
+    required:true
   },
   ppt:{
     type:[
       {lot:String,name:String,email:String,ph:Number}
-    ],
-    required:true
+    ]
   },
   t_quiz:{
     type:[
-      {lot:String,name:String,email:String,ph:Number}    ],
-    required:true
+      {lot:String,name:String,email:String,ph:Number}    ]
   },
   debug:{
     type:[
       {lot:String,name:String,email:String,ph:Number}
-    ],
-    required:true
+    ]
   },
   t_mime:{
     type:[
       {lot:String,name:String,email:String,ph:Number}
-    ],
-    required:true
+    ]
   },
   e_ads:{
     type:[
       {lot:String,name:String,email:String,ph:Number}
-    ],
-    required:true
+    ]
   },
   meme:{
     type:[
       {lot:String,name:String,email:String,ph:Number}
-    ],
-    required:true
+    ]
   },
   short:{
     type:[
       {lot:String,name:String,email:String,ph:Number}
-    ],
-    required:true
+    ]
   },
   e_poster:{
     type:[
       {lot:String,name:String,email:String,ph:Number}
-    ],
-    required:true
+    ]
   }
 })
 
