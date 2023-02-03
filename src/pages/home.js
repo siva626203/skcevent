@@ -24,17 +24,7 @@ const Homepage=()=>{
           className="image-icon1"
           src="https://i.ibb.co/qmWsBbW/Untitled-2.png"
         />
-      
-      {/* <img
-          className="image-icon2"
-          src="https://lh3.googleusercontent.com/F86G3LCj_ummVonVs8w69_xcvhuda4DXSnwFdN8e0zg79QJ2HJDGfHbHx-rv0a3L1Ce0pBcAOyQN5AcJjHC-1_I4rEjjL0O2PX5WT6mquTJVP6ZTOWkwfNY41j1Kz92TxBfKxapvYgmQK9cQfFiWDu_W7_L8Vb-HSdTWD7VZ0F07L_zc_hvUHiRR-PQwj6Y81btll2_f2Tm0hjeB7D-u12VkqsXf1wTELmupMYwxzJP15Jl05KecsnNEd0GrMYcK03-uB3O7ewJHifgSanCqdI8_QiNbLUeu03srR3yAQO2ZHhDDeZoLTopWFjNDPBEL3f6Lhhn7EmS40sl-owa6IjrQLAGSi7nZRtSrctW1dksjXwcxieUm57gTyhTBW02T8pHmTdBNyxZ8NCGeGhC4WgrtCE8gypplfEwqGnKokX__5HnTRMC_3tfXkmVI2lYcz85rtXthIUxW0lXesAoEihKQ45CflcG36oc5ALhWNCkILao4p1BFOCrrVyCxd_P-89C-2U4P-jyWBD_fzdQxcmwffPHdD6iC1EFemwhiRzVG5JdbNxYaFjguIVv1VMJPK8kWJR-JcagYorjJDdIh8icKCu6cvN5VeGcWDStFpTMJkWx9ajSH67rHRn5d8kBSQq3jN-hkZ2ZHTRXjbRGD80qtbyQqT-FKRtES4TLQNG3lxjmbSIwh4_OjOvYwowdZXCE5hyMzIV1bOBEOep9Ru-0nKtO7__anqUGyUr1GAKRpqVvQ_kaUu4ppu4pQe_WEHrQhP-DzYG7uOIXdsODO31q_hWtwmt7gJSAeGJiGE5Gn81MeLKEbQ5abFxRM1vNtgVXGXy2FchZYXjOKYKfW6gay7up7W-BOcY45gn5EZLCE-1CSnEQszHll0tuc-jBi-klNVq1tle1lCjSKTRApxQFMfYuLlPo3scyXRvS_XcWyQRX0GNAr6jJBZNh1Ud5T1M0vo2tUQXmNymGgQn-TTwMVEyojM7Biyuunh0bQFmL9VCXwSN1FyQ=w753-h767-no?authuser=0"
-        />
-      <h1 className='text-center'>SRI KALISWARI College(Autonomous),Sivakasi</h1>
-      <h2 className='text-center'>DEPARTMENT OF INFORMATION TECHNOLOGY</h2>
-      <h2 className='text-center'>INFOSEA 2K23</h2> */}
-      
       </div>
-      
      <Carousel>
       <Carousel.Item>
         <img
@@ -57,7 +47,6 @@ const Homepage=()=>{
           src="https://i.ibb.co/wC9v3vr/20220407-114417-AMBy-GPSMap-Camera.jpg"
           alt="Third slide"
         />
-
       </Carousel.Item>
     </Carousel>
     <br/>
@@ -73,10 +62,7 @@ const Homepage=()=>{
         <Col><p className="address">Sri Kaliswari College ,<br/>GR7M+Q9P,<br/>Virudhunagar Main Road,<br/> Sivakasi, Tamil Nadu 626123</p></Col>
       </Row>
       </Container>
-    
-      
     <br/>
-
     </div>
 }
 export default Homepage;
