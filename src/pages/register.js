@@ -85,7 +85,7 @@ const getverify=()=>{
       lotno:yup.string()
       .required("pass code is Required"),
       staffname:yup.string()
-      .required("Staff Name is "),
+      .required("Enter Incharge Name"),
       scontact:yup.number()
       .typeError("That doesn't look like a phone number")
       .positive("A phone number can't start with a minus")
@@ -204,21 +204,23 @@ useEffect(()=>{
        }  
         
        
-       
+        
        {verification?<>
-       <h1>{coname}</h1>
-       <h5>{dname}</h5>
+        <div className='college-details'>
+       <p>{coname}</p>
+       <p>{dname}</p>
+       </div>
        <Container>
        <Form.Group className="mb-3" controlId="formBasicText">
        <Row  className="justify-content-md-center">
-        <Col><Form.Label>Enter Staff Name</Form.Label></Col>
-        <Col><Form.Control type="text" placeholder="Enter Staff Name" onChange={formik.handleChange} name="staffname" value={formik.values.staffname} />
+        <Col><Form.Label>Enter Incharge Name</Form.Label></Col>
+        <Col><Form.Control type="text" placeholder="Incharge Name" onChange={formik.handleChange} name="staffname" value={formik.values.staffname} />
         {formik.errors.staffname ? <p className='text-danger'>{formik.errors.staffname}</p> : null}</Col>
         </Row>
         </Form.Group><Form.Group className="mb-3" controlId="formBasicText">
           <Row className="justify-content-md-center">
-        <Col><Form.Label>Enter Staff Contact</Form.Label></Col>
-        <Col><Form.Control aria-autocomplete='false' type="text" placeholder="Enter Staff No" onChange={formik.handleChange} name="scontact" value={formik.values.scontact} />
+        <Col><Form.Label>Enter Incharge Mobile No</Form.Label></Col>
+        <Col><Form.Control aria-autocomplete='false' type="text" placeholder="Incharge Mobile No" onChange={formik.handleChange} name="scontact" value={formik.values.scontact} />
         {formik.errors.scontact ? <p className='text-danger'>{formik.errors.scontact}</p> : null}</Col>
         </Row>
         </Form.Group>
@@ -232,7 +234,7 @@ useEffect(()=>{
                <th>Event Name</th>
                  <th>Student Name</th>
                  <th>Email</th>
-                 <th>PHNO</th>
+                 <th>Mobile No</th>
                </tr>
              </thead>
              <tbody>
@@ -338,7 +340,7 @@ useEffect(()=>{
                </Button>
              </Modal.Footer>
            </Modal> */}<div className='checkbox'>
-           <Form.Check type="checkbox" label="Given Values are truly correct" onChange={e=>{if(btncheck){setBtn(false)}else{setBtn(true)}}}/>
+           <Form.Check type="checkbox" label="The above Information Given by a Correct " onChange={e=>{if(btncheck){setBtn(false)}else{setBtn(true)}}}/>
            </div>
          </Form.Group>
         

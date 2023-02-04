@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>SKC EVENT</title>
+        <title>INFOSEA 2K23</title>
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"/>
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"/>
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"/>
@@ -24,6 +24,7 @@ export default function Home() {
 <meta name="msapplication-TileColor" content="#ffffff"/>
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
 <meta name="theme-color" content="#ffffff"/>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Monoton" />
        {/* <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" crossorigin></script> */}
 
       {/* <script

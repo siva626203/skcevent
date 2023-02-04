@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+
 *{
   padding: 0%;
   margin: 0%;
@@ -21,11 +24,11 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
   background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+  font-family: 'Inter', sans-serif;
 }
 .address{
   color: azure;
-  padding-top: 70px;
+  padding-top: 10px;
 }
 .rform{
   padding-top: 60px;
@@ -37,6 +40,115 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
 }
 .image-icon1{
   width: 100%;
+}
+.college-details{
+  background-color: #D639C7;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 40px;
+  border-color: black;
+  border-style: double;
+  background: rgb(31,97,188);
+background: linear-gradient(90deg, rgba(31,97,188,0.9136904761904762) 1%, rgba(17,76,203,0.6783963585434174) 17%, rgba(139,29,189,0.8268557422969187) 49%, rgba(36,161,181,0.8018557764902836) 76%, rgba(255,226,0,0.5551470588235294) 100%);
+font-family: 'Inter', sans-serif;
+color:white;
+padding-top: 10px;
+}
+.text-bottom{
+  color: blue;
+  padding-top: 10%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.card1{
+  Transition-Duration: 0.4s;
+  Border-Radius: 25px;
+  align-items: center;
+}
+.carditems{
+  Justify-Content: Center;
+  Align-Items: Center;
+  Height:100vh;
+  text-align: center;
+}
+.event-text{
+  text-align: center;
+  background: #CF7221;
+background: linear-gradient(to right, #CF7221 0%, #886ECF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Monoton;
+font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Monoton; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Monoton; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+}
+.card2{
+  Transition-Duration: 0.4s;
+  Border-Radius: 25px;
+}
+.card3{
+  Transition-Duration: 0.4s;
+  Border-Radius: 25px;
+}
+.card4{
+  Transition-Duration: 0.4s;
+  Border-Radius: 25px;
+}
+.card5{
+  Transition-Duration: 0.4s;
+  Border-Radius: 25px;
+}
+.card6{
+  Transition-Duration: 0.4s;
+  Border-Radius: 25px;
+}
+.card7{
+  Transition-Duration: 0.4s;
+  Border-Radius: 25px;
+}
+.card8{
+  Transition-Duration: 0.4s;
+  Border-Radius: 25px;
+}
+.card1:hover{
+  Border:8px Solid Rgb(240, 166, 166);
+  Border-Radius: 25px;
+  Transition-Duration: 0.4s;
+}
+.card2:hover{
+  Border:8px Solid Rgb(240, 166, 166);
+  Border-Radius: 25px;
+  Transition-Duration: 0.4s;
+}
+.card3:hover{
+  Border:8px Solid Rgb(240, 166, 166);
+  Border-Radius: 25px;
+  Transition-Duration: 0.4s;
+}
+.card4:hover{
+  Border:8px Solid Rgb(240, 166, 166);
+  Border-Radius: 25px;
+  Transition-Duration: 0.4s;
+}
+.card5:hover{
+  Border:8px Solid Rgb(240, 166, 166);
+  Border-Radius: 25px;
+  Transition-Duration: 0.4s;
+}
+.card6:hover{
+  Border:8px Solid Rgb(240, 166, 166);
+  Border-Radius: 25px;
+  Transition-Duration: 0.4s;
+}
+.card7:hover{
+  Border:8px Solid Rgb(240, 166, 166);
+  Border-Radius: 25px;
+  Transition-Duration: 0.4s;
+}
+.card8:hover{
+  Border:8px Solid Rgb(240, 166, 166);
+  Border-Radius: 25px;
+  Transition-Duration: 0.4s;
+}
+.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8{
+  padding: 50px;
 }
 @media only screen and (max-width: 600px){
 	.image-icon1{
