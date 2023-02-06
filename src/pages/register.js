@@ -12,6 +12,7 @@ import axios from 'axios'
 import { useFormik,Field } from 'formik'
 import * as yup from 'yup'
 import { render } from 'react-dom';
+import Loader from './component/loader';
 import { ToastContainer, toast } from 'react-toastify';
 import Table from 'react-bootstrap/Table';
 import Modal from 'react-bootstrap/Modal';
@@ -53,10 +54,13 @@ const [short2,setShort2]=useState({lot:lotnum,name:"",email:"",ph:0})
 const [short3,setShort3]=useState({lot:lotnum,name:"",email:"",ph:0})
 const [short4,setShort4]=useState({lot:lotnum,name:"",email:"",ph:0})
 const [btncheck,setBtn]=useState(false)
+const [Load,setLoad]=useState(false)
 const getverify=()=>{
+  setLoad(true);
   axios.post("./api/college/verify",{lotno:formik.values.lotno})
   .then((res)=>{
     console.log(res.data)
+    
     if(res.data.message==="Check Lot Number"){
       toast.error("Check Pass Code"),{
         position: toast.POSITION.TOP_RIGHT
@@ -72,8 +76,10 @@ const getverify=()=>{
     setconame(res.data.data.collegename);
     setDname(res.data.data.department);
   }
+  setLoad(false)
   }).catch(error=>{
     console.log(error)
+    setLoad(false)
   })
 }
   const formik=useFormik({
@@ -94,6 +100,7 @@ const getverify=()=>{
       .required('A phone number is '),
         }),
     onSubmit:(data)=>{
+      setLoad(true)
       const datas={
         staffname:formik.values.staffname,
         scontact:formik.values.scontact,
@@ -132,6 +139,7 @@ const getverify=()=>{
         ]
   }
       console.log(datas)
+      setLoad(true)
       axios.post("./api/college/register",datas)
       .then(res=>{
         console.log(res.data)
@@ -152,7 +160,9 @@ const getverify=()=>{
         });
       }
       })
+      setLoad(false) 
       .catch(err=>{
+        setLoad(false)
         toast.error(err.response.data);
       })
       
@@ -179,7 +189,7 @@ console.log(details)
 useEffect(()=>{
   console.log(lotnum)
 })
-   return (<><Header /><div className='rform'>
+   return (<><Header />{Load?<Loader/>:<div className='rform'>
 
      <ToastContainer />
 
@@ -346,8 +356,9 @@ useEffect(()=>{
         
       {btncheck?<Button type='submit' className='mb-3'>SUBMIT</Button>:<Button type='submit' className='mb-3'variant="secondary" disabled>SUBMIT</Button>}</>:null}
      </Form>
+     
      <Footer />
-   </div></>
+   </div>}</>
     );
 }
 

@@ -12,6 +12,101 @@ background: -webkit-linear-gradient(bottom left, #7A81AE, #D639C7);
 background: -moz-linear-gradient(bottom left, #7A81AE, #D639C7);
 background: linear-gradient(to top right, #7A81AE, #D639C7);
 }
+.card1 {
+  height: 450px;
+  width: 400px;
+  background: url("https://i.ibb.co/nLHfsZ1/card1.png") no-repeat;
+  margin: 10px;
+}
+.card1:hover {
+ 
+  background: url("https://i.ibb.co/93W0vm0/cardback1.png") no-repeat;
+}
+.card2 {
+  height: 450px;
+  width: 400px;
+  background: url("https://i.ibb.co/Nn5wWnS/card2.png") no-repeat;
+  margin: 10px;
+}
+.card2:hover {
+  background: url("https://i.ibb.co/tzZvCDh/cardback2.png") no-repeat;
+}
+.card3 {
+  height: 450px;
+  width: 400px;
+  background: url("https://i.ibb.co/wgzvTyM/card3.png") no-repeat;
+  margin: 10px;
+}
+.card3:hover {
+  background: url("https://i.ibb.co/V9BmN5j/cardback3.png") no-repeat;
+}
+.card4 {
+  height: 450px;
+  width: 400px;
+  background: url("https://i.ibb.co/xsqX762/card4.png") no-repeat;
+  margin: 10px;
+}
+.card4:hover {
+  background: url("https://i.ibb.co/j3SF6vw/cardback4.png") no-repeat;
+}
+.card5 {
+  height: 450px;
+  width: 400px;
+  background: url("https://i.ibb.co/HzFzQqY/card5.png") no-repeat;
+  margin: 10px;
+}
+.card5:hover {
+  background: url("https://i.ibb.co/PQ1NYsB/cardback5.png") no-repeat;
+}
+.card6 {
+  height: 450px;
+  width: 400px;
+  background: url("https://i.ibb.co/w09C5p5/card6.png") no-repeat;
+  margin: 10px;
+}
+.card6:hover {
+  background: url("https://i.ibb.co/t3rmXxC/cardback6.png") no-repeat;
+}
+.card7{
+  height: 450px;
+  width: 400px;
+  background: url("https://i.ibb.co/yyNPnVp/card7.png") no-repeat;
+  margin: 10px;
+}
+.card7:hover {
+  background: url("https://i.ibb.co/sFTYpsL/cardback7.png") no-repeat;
+}
+.card8{
+  height: 450px;
+  width: 400px;
+  background: url("https://i.ibb.co/XWx8dGd/card8.png") no-repeat;
+  margin: 10px;
+}
+.card8:hover {
+  background: url("https://i.ibb.co/RzyczZ8/cardback8.png") no-repeat;
+}
+/* .cardback1{
+  display: none;
+}
+.cardback2{
+  display: none;
+}
+.cardback3{
+  display: none;
+}
+.cardback4{
+  display: none;
+}
+.cardback5{
+  display: none;
+}
+.cardback6{
+  display: none;
+}
+.cardback7{
+  display: none;
+}
+.cardback8{} */
 .note{
   background: #4DCF89;
   background: linear-gradient(to right, #4DCF89 20%, #CF927C 64%);
@@ -59,15 +154,12 @@ padding-top: 10px;
   padding-top: 10%;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.card1{
+/* .card1{
   Transition-Duration: 0.4s;
   Border-Radius: 25px;
   align-items: center;
-}
+} */
 .carditems{
-  Justify-Content: Center;
-  Align-Items: Center;
-  Height:100vh;
   text-align: center;
 }
 .event-text{
@@ -77,9 +169,13 @@ background: linear-gradient(to right, #CF7221 0%, #886ECF 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 font-family: Monoton;
-font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Monoton; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Monoton; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+font-size: 24px;
+font-style: normal; 
+font-variant: normal;
+ font-weight: 700; 
+line-height: 26.4px; 
 }
-.card2{
+/* .card2{
   Transition-Duration: 0.4s;
   Border-Radius: 25px;
 }
@@ -146,9 +242,9 @@ font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; lin
   Border:8px Solid Rgb(240, 166, 166);
   Border-Radius: 25px;
   Transition-Duration: 0.4s;
-}
+} */
 .card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8{
-  padding: 50px;
+  display: flex;
 }
 @media only screen and (max-width: 600px){
 	.image-icon1{
