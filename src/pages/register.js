@@ -25,7 +25,7 @@ const Register=()=> {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [lotverify,setLotverify]=useState();
-  const navigate=useRouter();
+  const route=useRouter();
 const [lot,setLot]=useState();
 const [name,setName]=useState();
 const [event,setEvent]=useState();
@@ -149,6 +149,7 @@ const getverify=()=>{
           });
           console.log(lotnum)
           console.log(res.data.data)
+          route.push("/events");
         }else if(res.data.message==="LotNo Already Taken"){
           toast.error("Already Registred", {
             position: toast.POSITION.TOP_RIGHT
@@ -200,6 +201,7 @@ useEffect(()=>{
         <Form.Group className="mb-3" controlId="formBasicText">
           <h6 className='note'>Note: To register INFOSEA 2K23, use Your allotted College Passcode, or wants a new Passcode (for new colleges)</h6>
           <h6 className='note-2'>Contact: 95667 74028</h6>
+          <a className='downlink' target="_blank" href='https://drive.google.com/file/d/1tgfY2j-JtPl70Zo5LsBai9mKKjhla_2a/view?usp=sharing' rel="noreferrer">Get the Pass Code</a>
          <Row  className="justify-content-md-center">
              <Col><Form.Label>Enter Pass Code</Form.Label></Col>
              <Col> <Form.Control type="text" placeholder="Enter Pass Code" onChange={formik.handleChange} name="lotno" value={formik.values.lotno} />
@@ -236,7 +238,7 @@ useEffect(()=>{
        </Container>
          
          <Form.Group>
-          <p className='text-danger'>* All Fields are mandatory</p>
+          <p className='text-danger'>*</p>
            <Table striped bordered hover>
              <thead>
                <tr>
