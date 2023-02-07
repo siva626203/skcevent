@@ -204,7 +204,6 @@ useEffect(()=>{
              <Col><Form.Label>Enter Pass Code</Form.Label></Col>
              <Col> <Form.Control type="text" placeholder="Enter Pass Code" onChange={formik.handleChange} name="lotno" value={formik.values.lotno} />
                {formik.errors.lotno ? <p className='text-danger'>{formik.errors.lotno}</p> : null}
-              <Form.Text>Your Pass code is LOT NO</Form.Text>
                </Col>
            </Row><br/>
            <Button variant="success" onClick={e => getverify()}>Get Form</Button>

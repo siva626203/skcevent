@@ -13,8 +13,7 @@ export default async (request,response)=>{
           console.log(register);
         }else{
           response.send("LotNo Already Taken")
-        }
-        response.send(find)       
+        }      
     } catch (error) {
       response.status(500).send("something wrong")
     }

@@ -108,11 +108,12 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
 }
 .cardback8{} */
 .note{
-  background: #4DCF89;
-  background: linear-gradient(to right, #4DCF89 20%, #CF927C 64%);
+  background: black;
+  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: #7A81AE;
+  border: #CF1512;
 }
 .register-text{
   background: #121FCF;
