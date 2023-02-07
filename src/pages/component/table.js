@@ -46,7 +46,6 @@ this.getAll();
                 console.log(e);
             })
         }
- 
     render(){
         return <Fragment>
             <Table responsive striped bordered hover size="sm">
@@ -55,6 +54,7 @@ this.getAll();
                 <th>Pass Code</th>
                 <th>Staff Name</th>
                 <th>Staff Contact</th>
+                <th>View</th>
                 <th>Delete</th>
             </tr>
           </thead>
@@ -65,7 +65,8 @@ this.getAll();
                 <tr key={e._id}>
                     <td>{e.lotno}</td>
                     <td>{e.staffname}</td>
-                    <td>{e.scontact}</td>   
+                    <td>{e.scontact}</td>
+                    <td><Button onClick={this.View=()=>{window.location.replace('/dash/view');localStorage.setItem("Passcode",e.lotno)}}>View</Button></td> 
                     <td><Button onClick={this.Delete=()=>{
                         console.log(e)
                           axios.delete("../api/college/delete",{data:{_id:`${e._id}`}})
