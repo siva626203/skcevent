@@ -21,7 +21,7 @@ function Header(){
             <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/course'>Course</Link></Nav.Link> */}
           </Nav>
           <Nav>
-            <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/login'>Login</Link></Nav.Link>
+            {/* <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/login'>Login</Link></Nav.Link> */}
             <Nav.Link eventKey={2}>
               <Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/register'>
               Register

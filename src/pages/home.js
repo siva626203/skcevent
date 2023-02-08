@@ -11,6 +11,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Link from 'next/link';
 const Homepage=()=>{
   const dispatch=useDispatch()
   const [name,setUsername]=useState()
@@ -21,6 +22,9 @@ const Homepage=()=>{
     return<div className='home'>
       
       <div>
+      <Link className="reg-btn"  href='/register'>
+              Register
+              </Link>
       <img
           className="image-icon1"
           src="https://i.ibb.co/qmWsBbW/Untitled-2.png"

@@ -8,6 +8,16 @@
 .downlink{
   text-decoration: none;
 }
+.reg-btn{
+  background-color: black;
+  font-size: larger;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 30px;
+  border-radius: 30px;
+  padding: 10px;
+  margin-top: 10px;
+}
 .home{
   /* Created with https://www.css-gradient.com */
 background: #7A81AE;
