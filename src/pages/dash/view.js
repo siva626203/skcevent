@@ -9,26 +9,30 @@ import Col from 'react-bootstrap/Col';
 function View() {
     const [data,setData]=useState();
     const [college,setCollege]=useState()
-    useEffect(async()=>{
-       const code=localStorage.getItem("Passcode")
+    const getData=async()=>{
+      const code=localStorage.getItem("Passcode")
        console.log(code)
-       await axios.post("../api/college/verify",{lotno:code})
+      await  axios.post("../api/college/verify",{lotno:code})
        .then((res)=>{
         console.log(res.data)
         setCollege(res.data.data)
        })
-       await axios.post("../api/college/getpasscode",{lotno:code})
+      await axios.post("../api/college/getpasscode",{lotno:code})
        .then((res)=>{
         setData(res.data)
         console.log(res.data)
        })
+    }
+    useEffect(()=>{
+       getData();
     },[])
     const print=()=>{
         window.print()
     }
   return (<div>
     <Button onClick={e=>print()}>Print</Button>
-    {college?<Container>
+    <h1 className='text-center'>College Details</h1>
+    {data?<Container>
       <Row>
         <Col>College Name</Col>
         <Col>{college.collegename}</Col>
@@ -50,8 +54,12 @@ function View() {
         <Col>Email Id</Col>
         <Col>{data.email}</Col>
       </Row>
+      <Row>
+        <Col>Pass Code</Col>
+        <Col>{college.lotno}</Col>
+      </Row>
       </Container>:null}
-    <h1 className='text-center'>College Details</h1>
+    
     
     <Table striped bordered hover>
       <thead>

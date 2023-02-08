@@ -16,6 +16,7 @@ text-shadow: 2px 2px 5px red;
 
 }
 .reg-btn{
+  display: none;
   background-color: black;
   font-size: larger;
   text-align: center;
@@ -278,6 +279,20 @@ line-height: 26.4px;
     text-align: left;
     padding-left: 100px;
   }
+  .reg-btn{
+    background-color: black;
+    font-size: larger;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 10px;
+    display: inline;
+  }
+  .reg-nav-btn{
+    display: none;
+  }
 }
 @media only screen and (max-width: 425px){
 	.image-icon1{
@@ -286,6 +301,20 @@ line-height: 26.4px;
     
     height: 100%;
   
+  }
+  .reg-nav-btn{
+    display: none;
+  }
+  .reg-btn{
+    display: inline;
+    background-color: black;
+    font-size: larger;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 10px;
   }
   .checkbox{
     text-align: left;

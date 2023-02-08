@@ -361,8 +361,8 @@ useEffect(()=>{
                </Button>
              </Modal.Footer>
            </Modal> */}<div className='checkbox'>
-           <Form.Check type="checkbox" label="Please Check the Details Before to Submit " onChange={e=>{if(btncheck){setBtn(false)}}}/>
-           <Form.Check type="checkbox" label="The Details Given by us is Correct " onChange={e=>{if(btncheck){setBtn(false)}else{setBtn(true)}}}/>
+           {/* <Form.Check type="checkbox" label=" " onChange={e=>{if(btncheck){setBtn(false)}}}/> */}
+           <Form.Check type="checkbox" label="Please Check the Details Before to Submit & Ensure the given details by you is correct" onChange={e=>{if(btncheck){setBtn(false)}else{setBtn(true)}}}/>
            </div>
          </Form.Group>
         
