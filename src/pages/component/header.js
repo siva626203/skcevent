@@ -23,7 +23,7 @@ function Header(){
           <Nav>
             {/* <Nav.Link><Link style={{paddingLeft: 13, textDecoration: 'none'}} href='/login'>Login</Link></Nav.Link> */}
             <Nav.Link eventKey={2}>
-              <Link className="reg-nav-btn"style={{paddingLeft: 13, textDecoration: 'none'}} href='/register'>
+              <Link className="reg-btn" style={{paddingLeft: 13, textDecoration: 'none'}} href='/register'>
               Register
               </Link>
             </Nav.Link>

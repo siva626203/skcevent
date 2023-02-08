@@ -22,9 +22,6 @@ const Homepage=()=>{
     return<div className='home'>
       
       <div>
-      <Link className="reg-btn"  href='/register'>
-              Register
-              </Link>
       <img
           className="image-icon1"
           src="https://i.ibb.co/qmWsBbW/Untitled-2.png"

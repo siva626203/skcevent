@@ -15,8 +15,8 @@ text-shadow: 2px 2px 5px red;
   margin: 10px;
 
 }
-.reg-btn{
-  display: none;
+/* .reg-btn{
+
   background-color: black;
   font-size: larger;
   text-align: center;
@@ -25,7 +25,7 @@ text-shadow: 2px 2px 5px red;
   border-radius: 30px;
   padding: 10px;
   margin-top: 10px;
-}
+} */
 .home{
   /* Created with https://www.css-gradient.com */
 background: #7A81AE;
@@ -279,7 +279,7 @@ line-height: 26.4px;
     text-align: left;
     padding-left: 100px;
   }
-  .reg-btn{
+  /* .reg-btn{
     background-color: black;
     font-size: larger;
     text-align: center;
@@ -289,7 +289,7 @@ line-height: 26.4px;
     padding: 10px;
     margin-top: 10px;
     display: inline;
-  }
+  } */
   .reg-nav-btn{
     display: none;
   }
@@ -305,7 +305,7 @@ line-height: 26.4px;
   .reg-nav-btn{
     display: none;
   }
-  .reg-btn{
+  /* .reg-btn{
     display: inline;
     background-color: black;
     font-size: larger;
@@ -315,7 +315,7 @@ line-height: 26.4px;
     border-radius: 30px;
     padding: 10px;
     margin-top: 10px;
-  }
+  } */
   .checkbox{
     text-align: left;
     padding-left: 100px;
