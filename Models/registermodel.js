@@ -13,6 +13,9 @@ const registerSchema=new mongoose.Schema({
     type:Number,
     required:true
   },
+  email:{
+    type:String
+  },
   ppt:{
     type:[
       {lot:String,name:String,email:String,ph:Number}

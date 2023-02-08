@@ -87,6 +87,7 @@ const getverify=()=>{
       staffname:"",
       scontact:yup.number,
       lotno:"",
+      email:""
     },validationSchema:yup.object({
       lotno:yup.string()
       .required("pass code is Required"),
@@ -98,6 +99,7 @@ const getverify=()=>{
       .integer("A phone number can't include a decimal point")
       .min(999999999)
       .required('A phone number is '),
+      email:yup.string().email("Field should contain a valid e-mail").max(255).required("E-mail is required"),
         }),
     onSubmit:(data)=>{
       setLoad(true)
@@ -105,6 +107,7 @@ const getverify=()=>{
         staffname:formik.values.staffname,
         scontact:formik.values.scontact,
         lotno:formik.values.lotno,
+        email:formik.values.email,
         ppt:[
             ppt1,
             ppt2
@@ -235,6 +238,13 @@ useEffect(()=>{
         {formik.errors.scontact ? <p className='text-danger'>{formik.errors.scontact}</p> : null}</Col>
         </Row>
         </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicText">
+          <Row className="justify-content-md-center">
+        <Col><Form.Label>Enter Incharge Email Id</Form.Label></Col>
+        <Col><Form.Control aria-autocomplete='false' type="email" placeholder="Incharge Email" onChange={formik.handleChange} name="email" value={formik.values.email} />
+        {formik.errors.email ? <p className='text-danger'>{formik.errors.email}</p> : null}</Col>
+        </Row>
+        </Form.Group>
        </Container>
          
          <Form.Group>
@@ -351,11 +361,12 @@ useEffect(()=>{
                </Button>
              </Modal.Footer>
            </Modal> */}<div className='checkbox'>
-           <Form.Check type="checkbox" label="The above Information Given by a Correct " onChange={e=>{if(btncheck){setBtn(false)}else{setBtn(true)}}}/>
+           <Form.Check type="checkbox" label="Please Check the Details Before to Submit " onChange={e=>{if(btncheck){setBtn(false)}}}/>
+           <Form.Check type="checkbox" label="The Details Given by us is Correct " onChange={e=>{if(btncheck){setBtn(false)}else{setBtn(true)}}}/>
            </div>
          </Form.Group>
         
-      {btncheck?<Button type='submit' className='mb-3'>SUBMIT</Button>:<Button type='submit' className='mb-3'variant="secondary" disabled>SUBMIT</Button>}</>:null}
+      {btncheck?<Button type='submit' className='mb-3'>SUBMIT</Button>:<Button type='submit' className='mb-3 d-none'variant="secondary" disabled>SUBMIT</Button>}</>:null}
      </Form>
      
      <Footer />
