@@ -3,11 +3,20 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 function View() {
     const [data,setData]=useState();
+    const [college,setCollege]=useState()
     useEffect(()=>{
        const code=localStorage.getItem("Passcode")
        console.log(code)
+       axios.post("../api/college/verify",{lotno:code})
+       .then((res)=>{
+        console.log(res.data)
+        setCollege(res.data.data)
+       })
        axios.post("../api/college/getpasscode",{lotno:code})
        .then((res)=>{
         setData(res.data)
@@ -19,6 +28,30 @@ function View() {
     }
   return (<div>
     <Button onClick={e=>print()}>Print</Button>
+    <h1 className='text-center'>College Details</h1>
+    <Container>
+      <Row>
+        <Col>College Name</Col>
+        <Col>{college.collegename}</Col>
+      </Row>
+      <Row>
+        <Col>Department Name</Col>
+        <Col>{college.department}</Col>
+      </Row>
+      <Row>
+        <Col>Staff Name</Col>
+        <Col>{data.staffname}</Col>
+      </Row>
+      
+      <Row>
+        <Col>Mobile No</Col>
+        <Col>{data.scontact}</Col>
+      </Row>
+      <Row>
+        <Col>Email Id</Col>
+        <Col>{data.email}</Col>
+      </Row>
+      </Container>
     <Table striped bordered hover>
       <thead>
         <tr>

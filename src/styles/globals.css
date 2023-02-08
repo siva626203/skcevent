@@ -7,6 +7,13 @@
 }
 .downlink{
   text-decoration: none;
+  background: #A6A8CF;
+  background: linear-gradient(to right, #A6A8CF 2%, #CF8984 100%);
+text-shadow: 2px 2px 5px red;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 10px;
+
 }
 .reg-btn{
   background-color: black;
