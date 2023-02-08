@@ -12,7 +12,7 @@ const Events=(props)=> {
         <div>
             <div className=''>
             <Header/>
-            <h1 className='event-text'>Events</h1>
+            <h1 className='event-text-1'>Events</h1>
             <div className='carditems'>
                 <Container>
             <Row className="justify-content-md-center">
@@ -40,7 +40,7 @@ const Events=(props)=> {
         <Container>
             <Row className="justify-content-md-center">
         <Col xs lg="3">
-        <div className='card7'></div>
+        <div className='card7'></div><p className='e-ads'>E Advertisement Sample Video -<a className='yt-link1' href='https://youtu.be/y5ejc8B7Vg0' target="_blank" rel="noreferrer"> Click Here</a> </p>
         </Col>
         <Col xs lg="3"><div className='card8'></div></Col>
         </Row>

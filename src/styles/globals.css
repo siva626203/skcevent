@@ -33,11 +33,17 @@ background: -webkit-linear-gradient(bottom left, #7A81AE, #D639C7);
 background: -moz-linear-gradient(bottom left, #7A81AE, #D639C7);
 background: linear-gradient(to top right, #7A81AE, #D639C7);
 }
+.yt-link1{
+  text-decoration: none;
+}
+.e-ads{
+ font-size: larger;
+}
 .card1 {
   height: 450px;
   width: 400px;
   background: url("https://i.ibb.co/nLHfsZ1/card1.png") no-repeat;
-  margin: 10px;
+  margin: 20px;
 }
 .card1:hover {
  
@@ -47,7 +53,7 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
   height: 450px;
   width: 400px;
   background: url("https://i.ibb.co/Nn5wWnS/card2.png") no-repeat;
-  margin: 10px;
+  margin: 20px;
 }
 .card2:hover {
   background: url("https://i.ibb.co/tzZvCDh/cardback2.png") no-repeat;
@@ -56,7 +62,7 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
   height: 450px;
   width: 400px;
   background: url("https://i.ibb.co/wgzvTyM/card3.png") no-repeat;
-  margin: 10px;
+  margin: 20px;
 }
 .card3:hover {
   background: url("https://i.ibb.co/V9BmN5j/cardback3.png") no-repeat;
@@ -65,7 +71,7 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
   height: 450px;
   width: 400px;
   background: url("https://i.ibb.co/xsqX762/card4.png") no-repeat;
-  margin: 10px;
+  margin: 20px;
 }
 .card4:hover {
   background: url("https://i.ibb.co/j3SF6vw/cardback4.png") no-repeat;
@@ -73,8 +79,8 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
 .card5 {
   height: 450px;
   width: 400px;
-  background: url("https://i.ibb.co/HzFzQqY/card5.png") no-repeat;
-  margin: 10px;
+  background: url("https://live.staticflickr.com/65535/52677211308_1863c10112_b.jpg") no-repeat;
+  margin: 20px;
 }
 .card5:hover {
   background: url("https://i.ibb.co/PQ1NYsB/cardback5.png") no-repeat;
@@ -83,7 +89,7 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
   height: 450px;
   width: 400px;
   background: url("https://i.ibb.co/w09C5p5/card6.png") no-repeat;
-  margin: 10px;
+  margin: 20px;
 }
 .card6:hover {
   background: url("https://i.ibb.co/t3rmXxC/cardback6.png") no-repeat;
@@ -92,7 +98,7 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
   height: 450px;
   width: 400px;
   background: url("https://i.ibb.co/yyNPnVp/card7.png") no-repeat;
-  margin: 10px;
+  margin: 20px;
 }
 .card7:hover {
   background: url("https://i.ibb.co/sFTYpsL/cardback7.png") no-repeat;
@@ -101,7 +107,7 @@ background: linear-gradient(to top right, #7A81AE, #D639C7);
   height: 450px;
   width: 400px;
   background: url("https://i.ibb.co/XWx8dGd/card8.png") no-repeat;
-  margin: 10px;
+  margin: 20px;
 }
 .card8:hover {
   background: url("https://i.ibb.co/RzyczZ8/cardback8.png") no-repeat;
@@ -196,6 +202,12 @@ font-style: normal;
 font-variant: normal;
  font-weight: 700; 
 line-height: 26.4px; 
+}
+.event-text-1{
+  font-family: 'Algerian';
+  font-size: 40px;
+  text-align: center;
+
 }
 /* .card2{
   Transition-Duration: 0.4s;
