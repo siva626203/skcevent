@@ -65,9 +65,9 @@ const Homepage=()=>{
         />
       </Carousel.Item>
     </Carousel>
-    <div className='text-center mt-5'>
+    {/* <div className='text-center mt-5'>
     <iframe  width="560" height="315" src="https://www.youtube.com/embed/y5ejc8B7Vg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+    </div> */}
     
     <br/>
     <br/>
