@@ -9,15 +9,15 @@ import Col from 'react-bootstrap/Col';
 function View() {
     const [data,setData]=useState();
     const [college,setCollege]=useState()
-    useEffect(()=>{
+    useEffect(async()=>{
        const code=localStorage.getItem("Passcode")
        console.log(code)
-       axios.post("../api/college/verify",{lotno:code})
+       await axios.post("../api/college/verify",{lotno:code})
        .then((res)=>{
         console.log(res.data)
         setCollege(res.data.data)
        })
-       axios.post("../api/college/getpasscode",{lotno:code})
+       await axios.post("../api/college/getpasscode",{lotno:code})
        .then((res)=>{
         setData(res.data)
         console.log(res.data)
@@ -28,8 +28,7 @@ function View() {
     }
   return (<div>
     <Button onClick={e=>print()}>Print</Button>
-    <h1 className='text-center'>College Details</h1>
-    <Container>
+    {college?<Container>
       <Row>
         <Col>College Name</Col>
         <Col>{college.collegename}</Col>
@@ -51,7 +50,9 @@ function View() {
         <Col>Email Id</Col>
         <Col>{data.email}</Col>
       </Row>
-      </Container>
+      </Container>:null}
+    <h1 className='text-center'>College Details</h1>
+    
     <Table striped bordered hover>
       <thead>
         <tr>
