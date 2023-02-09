@@ -52,6 +52,28 @@ const Homepage=()=>{
       <Carousel.Item>
         <img
           className="d-block w-100 rounded"
+          src="https://live.staticflickr.com/65535/52678496194_9c01d6b7bf_c.jpg"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 rounded"
+          src="https://live.staticflickr.com/65535/52678210626_53b96f0286_c.jpg"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 rounded"
+          src="https://live.staticflickr.com/65535/52678646700_322ce9084e_c.jpg"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      
+      <Carousel.Item>
+        <img
+          className="d-block w-100 rounded"
           src="https://i.ibb.co/RgFWCwc/20220418-23040-PMBy-GPSMap-Camera.jpg"
           alt="Second slide"
           

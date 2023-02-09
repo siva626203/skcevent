@@ -204,7 +204,7 @@ useEffect(()=>{
         <Form.Group className="mb-3" controlId="formBasicText">
           <h6 className='note'>Note: To register INFOSEA 2K23, use Your allotted College Passcode, or wants a new Passcode (for new colleges)</h6>
           <h6 className='note-2'>Contact: 95667 74028</h6>
-          <a className='downlink' target="_blank" href='https://drive.google.com/file/d/1SUexfVXsVH5M_XAMCWFAtHy4b7HnLwAm/view?usp=sharing' rel="noreferrer">Get the Pass Code</a>
+          <a className='downlink' target="_blank" href='https://drive.google.com/file/d/1h5PALf-OCv1dWlot1SQUrhKi8J24XDFJ/view?usp=sharing' rel="noreferrer">Get the Pass Code</a>
          <Row  className="justify-content-md-center">
              <Col><Form.Label>Enter Pass Code</Form.Label></Col>
              <Col> <Form.Control type="text" placeholder="Enter Pass Code" onChange={formik.handleChange} name="lotno" value={formik.values.lotno} />

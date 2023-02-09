@@ -277,9 +277,9 @@ line-height: 26.4px;
   Border-Radius: 25px;
   Transition-Duration: 0.4s;
 } */
-.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8{
+/* .card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8{
   display: flex;
-}
+} */
 @media only screen and (max-width: 600px){
 	.image-icon1{
     
