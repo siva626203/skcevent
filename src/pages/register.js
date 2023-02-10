@@ -53,6 +53,7 @@ const [short1,setShort1]=useState({lot:lotnum,name:"",email:"",ph:0})
 const [short2,setShort2]=useState({lot:lotnum,name:"",email:"",ph:0})
 const [short3,setShort3]=useState({lot:lotnum,name:"",email:"",ph:0})
 const [short4,setShort4]=useState({lot:lotnum,name:"",email:"",ph:0})
+const [short5,setShort5]=useState({lot:lotnum,name:"",email:"",ph:0})
 const [btncheck,setBtn]=useState(false)
 const [Load,setLoad]=useState(false)
 const getverify=()=>{
@@ -135,7 +136,7 @@ const getverify=()=>{
           meme1
         ],
         short:[
-          short1,short2,short3,short4
+          short1,short2,short3,short4,short5
         ],
         e_poster:[
           e_poster
@@ -304,9 +305,10 @@ useEffect(()=>{
                  </tr> */}
                  <tr>
                   <td>SHORT-FILM</td>
-                   <td><Form.Control  onChange={e=>setShort1(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setShort2(pre=>({...pre,name:e.target.value}))}/><Form.Control onChange={e=>setShort3(pre=>({...pre,name:e.target.value}))} /><Form.Control  onChange={e=>setShort4(pre=>({...pre,name:e.target.value}))}/></td>
-                   <td><Form.Control  onChange={e=>setShort1(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setShort2(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setShort3(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setShort4(pre=>({...pre,email:e.target.value}))}/></td>
-                   <td><Form.Control  onChange={e=>setShort1(pre=>({...pre,ph:e.target.value}))}/><Form.Control onChange={e=>setShort2(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setShort3(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setShort4(pre=>({...pre,ph:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setShort1(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setShort2(pre=>({...pre,name:e.target.value}))}/><Form.Control onChange={e=>setShort3(pre=>({...pre,name:e.target.value}))} /><Form.Control  onChange={e=>setShort4(pre=>({...pre,name:e.target.value}))}/><Form.Control  onChange={e=>setShort5(pre=>({...pre,name:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setShort1(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setShort2(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setShort3(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setShort4(pre=>({...pre,email:e.target.value}))}/><Form.Control  onChange={e=>setShort5(pre=>({...pre,email:e.target.value}))}/></td>
+                   <td><Form.Control  onChange={e=>setShort1(pre=>({...pre,ph:e.target.value}))}/><Form.Control onChange={e=>setShort2(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setShort3(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setShort4(pre=>({...pre,ph:e.target.value}))}/><Form.Control  onChange={e=>setShort5(pre=>({...pre,ph:e.target.value}))}/></td>
+                    
                  </tr>
                  <tr>
                   <td>E-POSTER-DESIGN</td>

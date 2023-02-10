@@ -78,21 +78,21 @@ function FacultyDash(){
                 <Form.Label>Student Name</Form.Label>
                 <Form.Select value={formik.values.StudentName} type="text" onChange={formik.handleChange} name="StudentName">
                 <option>{formik.values.StudentName}</option>
-                {sdata.map(e=>{
+                {/* {sdata.map(e=>{
                     if(data.eventname===e.event){
                         return<option key={e._id}>{e.sname}</option>
                     }
-                })}
+                })} */}
                 </Form.Select>
                 {<p className='text-danger'>{formik.errors.StudentName}</p>}
                 <Form.Label>StaffName</Form.Label>
                 <Form.Select value={formik.values.StaffName} type="text" onChange={formik.handleChange} name="StaffName">
                 <option>{formik.values.StaffName}</option>
-                {sdata.map(e=>{
+                {/* {sdata.map(e=>{
                     if(data.eventname===e.event){
                         return<option key={e._id}>{e.staffname}</option>
                     }
-                })}
+                })} */}
                 </Form.Select>
                 {<p className='text-danger'>{formik.errors.StaffName}</p>}
                 <Form.Label>Mark</Form.Label>

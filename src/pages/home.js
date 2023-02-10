@@ -51,8 +51,15 @@ const Homepage=()=>{
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 rounded"
+          className="d-block w-100 rounded img-fluid"
           src="https://live.staticflickr.com/65535/52678496194_9c01d6b7bf_c.jpg"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 rounded img-fluid"
+          src="https://live.staticflickr.com/65535/52678707533_47ce66fac1_c.jpg"
           alt="First slide"
         />
       </Carousel.Item>
@@ -66,7 +73,7 @@ const Homepage=()=>{
       <Carousel.Item>
         <img
           className="d-block w-100 rounded"
-          src="https://live.staticflickr.com/65535/52678646700_322ce9084e_c.jpg"
+          src="https://live.staticflickr.com/65535/52680378960_8fb5154f8c_b.jpg"
           alt="First slide"
         />
       </Carousel.Item>
