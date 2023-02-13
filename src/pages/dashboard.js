@@ -83,9 +83,9 @@ useEffect(()=>{
            <Button onClick={Logout}>Logout</Button><br/>
            {/* {(currentUser.status==='admin')?<Fragment><Addcollege/></Fragment>:null} */}
            {(currentUser.status==="admin") ? <ListTable/>:null }<br/>
-           {/* {(currentUser.status==="admin")?<Fragment><Student/><StudentList/></Fragment>:null} */}
-           {(currentUser.status==='faculty'?<Fragment><FacultyDash/></Fragment>:null)}
-           {(currentUser.status==='admin')?<Fragment><StudentMarkList/></Fragment>:null}
+           {(currentUser.status==="admin")?<Fragment><Student/><StudentList/></Fragment>:null}
+           {/* {(currentUser.status==='faculty'?<Fragment><FacultyDash/></Fragment>:null)} */}
+           {/* {(currentUser.status==='admin')?<Fragment><StudentMarkList/></Fragment>:null} */}
            {(currentUser.status==="admin")? <Fragment>
             <Form className="login" onSubmit={formik.handleSubmit}>
                 <Form.Label>Faculty Add Form</Form.Label>
@@ -107,7 +107,7 @@ useEffect(()=>{
                    <option value="DEBUGGING">DEBUGGING</option>
                    <option value="TECHNICAL-MIME">TECHNICAL-MIME</option>
                    <option value="E-ADVERTISEMENT">E-ADVERTISEMENT</option>
-                   <option value="TECHNICAL-DUBSMASH">TECHNICAL-DUBSMASH</option>
+                   <option value="MEME-CREATION">MEME-CREATION</option>
                    <option value="SHORT-FILM">SHORT-FILM</option>
                    <option value="E-POSTER-DESIGN">E-POSTER-DESIGN</option>
                 </Form.Select>

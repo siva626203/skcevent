@@ -109,7 +109,8 @@ const cformik=useFormik({initialValues:{
           toast.error(req.data)
         }else{
           dispatch(login({username:fformik.values.username,status:req.data.status}))
-          navigate.push("/dashboard")
+          navigate.push("/marksheet")
+          localStorage.setItem("event",req.data.eventname)
           toast.success("Welcome to SKC")
           
     

@@ -20,11 +20,10 @@ console.log("componen")
     }
 
  getAll=()=>{
-      axios.get("../api/student/details")
+      axios.get("../api/localreg/get")
             .then((req,res)=>{
                 this.setState({
                     sdata:req.data
-
                 })
                 console.log(req.data);
             }).catch((e)=>{
@@ -39,9 +38,10 @@ console.log("componen")
             <thead>
             <tr>
                <th>Lot No</th>
-               <th>Student Event</th>
+               <th>College</th>
                <th>Event</th>
-               <th>Delete</th>
+               <th>Students Name</th>
+               <th>Score</th>
             </tr>
           </thead>
           <tbody>
@@ -49,22 +49,11 @@ console.log("componen")
             
             this.state.sdata.map(e=>
                 <tr key={e._id}>
-                    <td>{e.lot}</td>
-                    <td>{e.name}</td>
-                    <td>{e.event}</td>
-                    <td><Button onClick={this.Delete=()=>{
-                        console.log(e)
-                        axios.post("../api/student/delete",e)
-                        .then((req,res)=>{
-                            if(req.data.message==="deleted"){
-                            toast.success("Deleted successfully");
-                            }
-                            this.getAll();
-                            
-                            console.log(req);
-                        }).catch((e=>toast.error(e)))
-                          
-                    }}>Delete</Button></td>
+                    <td>{e.lotno}</td>
+                    <td>{e.CollegeName}</td>
+                    <td>{e.EventName}</td>
+                    <td>{e.Sname}</td>
+                    <td>{e.Score}</td>
                 </tr>
                 
                 )
