@@ -8,6 +8,8 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import { ToastContainer, toast } from 'react-toastify';
 import { logout } from '@/features/user';
+import Preloader from './preloader';
+import { Placeholder } from 'react-bootstrap';
 function MarkSheet() {
     const dispatch=useRouter();
     const [event,setEvent]=useState("")
@@ -15,10 +17,12 @@ function MarkSheet() {
     const [college,setCollege]=useState();
     const [score,setScore]=useState(0)
     const [lotno,setLot]=useState()
+    const [Load,setLoad]=useState(false)
     const formik=useFormik({
         initialValues:{},
-        onSubmit:(e)=>{
-            axios.post("./api/localreg/register",{ lotno:lotno,
+        onSubmit: async(e)=>{
+            setLoad(true)
+           await axios.post("./api/localreg/register",{ lotno:lotno,
             EventName:event,
             Sname:student,
             CollegeName:college,
@@ -31,16 +35,19 @@ function MarkSheet() {
                 toast.success("Success")
                 console.log(res)
                 }
+                setLoad(false)
             })
             
             setStudents("")
             setCollege("")
             setLot("")
             document.getElementById("form").reset();
+
         }
     })
   return (
     <><ToastContainer />
+    {Load?<Placeholder/>:null}
     <h1 className='text-center mt-5'>Local Registration Form</h1>
     
     <div className='m-5 orange .bg-info'>

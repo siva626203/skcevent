@@ -8,6 +8,7 @@ import registerReducer  from '../../src/features/register';
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css'
 import '../styles/loader.css'
+import "../styles/lazyload.css"
 const store=configureStore({
   reducer: {
     user: userReducer,

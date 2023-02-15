@@ -16,7 +16,7 @@ class StudentList extends React.Component
     componentDidMount(){
 
 this.getAll();
-console.log("componen")
+console.log("component")
     }
 
  getAll=()=>{
@@ -61,6 +61,7 @@ console.log("componen")
           </tbody>
 
         </Table>
+        
         </Fragment>
     }
     
