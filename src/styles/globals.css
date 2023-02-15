@@ -333,3 +333,11 @@ line-height: 26.4px;
     padding-left: 100px;
   }
 }
+.image-lot{
+  position: relative;
+}
+.image-dis{
+  visibility: visible;
+  height: 300px;
+  width: 300px;
+}
